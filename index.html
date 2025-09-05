@@ -6,7 +6,7 @@
   <title>BrushForge — Miniature Paint Companion</title>
   <meta name="description" content="BrushForge helps miniature painters convert colors across brands, build palettes, track inventory, and use AI tools — with ΔE-LAB accuracy." />
 
-  <!-- Font preloading -->
+  <!-- Font preloading (no FOUT) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap"
@@ -75,7 +75,7 @@
               <div class="skeleton header"></div>
               <div class="skeleton row"></div>
 
-              <!-- Segmented control -->
+              <!-- Real segmented control -->
               <div class="segment" aria-label="Filter results">
                 <button class="seg on" type="button">All</button>
                 <button class="seg" type="button">Owned</button>
@@ -205,62 +205,35 @@
       </div>
     </section>
 
-    <!-- Pricing (same visual style; new content & Lifetime) -->
+    <!-- Pricing -->
     <section class="section alt" id="pricing">
       <div class="container">
-        <h2 class="section-title eczar reveal">Choose your plan</h2>
-        <p class="section-subtitle reveal" style="--d:60ms">Paint smarter. Support a solo hobbyist dev.</p>
-
+        <h2 class="section-title eczar reveal">Simple pricing</h2>
+        <p class="section-subtitle reveal" style="--d:60ms">Start free. Upgrade when you need more power.</p>
         <div class="pricing">
-          <!-- Free -->
           <div class="price-card reveal">
             <h3>Free</h3>
-            <p class="price">0&nbsp;€</p>
+            <p class="price">$0</p>
             <ul class="bullets">
-              <li>Paint converter</li>
-              <li>Basic palettes</li>
+              <li>Converter & basic palettes</li>
               <li>Limited inventory</li>
               <li>AI demo credits</li>
             </ul>
             <a class="btn btn-ghost" href="#download">Get Started</a>
           </div>
-
-          <!-- Premium Lifetime (featured) -->
-          <div class="price-card featured reveal" style="--d:60ms">
-            <div class="badge">Best value</div>
-            <h3>Premium Lifetime</h3>
-            <p class="price">29,99&nbsp;€ <span class="tiny" style="display:block;margin-top:4px">One-time unlock + monthly credits</span></p>
+          <div class="price-card featured reveal" style="--d:80ms">
+            <div class="badge">Recommended</div>
+            <h3>Premium</h3>
+            <p class="price">$X.99 / mo</p>
             <ul class="bullets">
-              <li>Unlimited paints, palettes & recipes</li>
+              <li>Unlimited inventory & palettes</li>
+              <li>Advanced color matching & mixes</li>
               <li>150 AI credits / month</li>
-              <li>Vision paint recognition (10 images/month)</li>
-              <li>No ads. No trackers.</li>
+              <li>Vision (10 images / month)</li>
             </ul>
-            <a class="btn btn-primary" href="#download">Get Lifetime</a>
+            <a class="btn btn-primary" href="#download">Go Premium</a>
           </div>
         </div>
-
-        <!-- A second row with Monthly to keep layout balanced on desktop -->
-        <div class="pricing" style="margin-top:18px">
-          <!-- Premium Monthly -->
-          <div class="price-card reveal">
-            <h3>Premium Monthly</h3>
-            <p class="price">3,99&nbsp;€ / mo</p>
-            <ul class="bullets">
-              <li>150 monthly AI credits</li>
-              <li>All Premium features</li>
-              <li>Cancel anytime</li>
-            </ul>
-            <a class="btn btn-ghost" href="#download">Start Monthly</a>
-          </div>
-
-          <!-- Spacer card for symmetry on large screens (optional) -->
-          <div class="price-card reveal" aria-hidden="true" style="opacity:.001; pointer-events:none"></div>
-        </div>
-
-        <p class="tiny legal dim reveal" style="--d:120ms; margin-top:8px">
-          Payment is handled by Apple. Subscriptions renew automatically until canceled in Settings. Prices may vary by region.
-        </p>
       </div>
     </section>
 
@@ -287,7 +260,7 @@
       </div>
     </section>
 
-    <!-- Bottom Tab preview -->
+    <!-- Bottom Tab preview (mirrors app) -->
     <section class="section" aria-label="Bottom tab preview">
       <div class="container">
         <div class="tab-preview">
