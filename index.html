@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrushForge — Miniature Paint Companion</title>
+  <meta name="description" content="BrushForge helps miniature painters convert colors across brands, build palettes, track inventory, and use AI tools — with ΔE-LAB accuracy." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta property="og:title" content="BrushForge — Miniature Paint Companion" />
+  <meta property="og:description" content="Accurate paint converter, palettes, inventory, and AI tools for hobbyists." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.png" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="icon" href="assets/icons/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand">
+        <span class="logo-orb" aria-hidden="true"></span>
+        <span class="brand-text eczar">BrushForge</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" role="navigation">
+        <a href="#features">Features</a>
+        <a href="#converter">Converter</a>
+        <a href="#palettes">Palettes</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#maker" class="btn btn-ghost">Maker</a>
+        <a href="#download" class="btn btn-primary btn-small">Get App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="BrushForge">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="display eczar reveal">Paint <span class="accent">Converter</span>, Palettes & AI</h1>
+          <p class="lead reveal" style="--d:80ms">
+            Built for miniature painters. Convert colors across Citadel, Vallejo, Army Painter, AK and more using ΔE-LAB accuracy. Organise paints, build palettes, and use smart AI hints.
+          </p>
+          <div class="cta-row reveal" style="--d:160ms">
+            <a href="#download" class="btn btn-primary">Download</a>
+            <a href="#features" class="btn btn-ghost">Explore Features</a>
+          </div>
+          <div class="pill-row reveal" style="--d:220ms">
+            <span class="pill">ΔE-LAB matches</span>
+            <span class="pill">Mix suggestions</span>
+            <span class="pill">Owned filters</span>
+            <span class="pill">Offline core</span>
+          </div>
+        </div>
+
+        <!-- Phone mock in BrushForge style -->
+        <div class="hero-visual reveal" style="--d:240ms">
+          <div class="device-frame">
+            <div class="device-glow"></div>
+            <div class="screen">
+              <div class="skeleton header"></div>
+              <div class="skeleton row"></div>
+              <div class="seg-pills">
+                <span class="seg on">All</span><span class="seg">Owned</span><span class="seg">Wishlist</span>
+              </div>
+              <div class="glass card">
+                <div class="tag">Convert to</div>
+                <div class="chips">
+                  <span class="chip"><span class="icon-list" aria-hidden="true"></span>Brands</span>
+                  <span class="chip active">AK Interactive</span>
+                  <span class="chip">Army Painter</span>
+                  <span class="chip">Citadel</span>
+                  <span class="chip">Vallejo</span>
+                  <span class="chip">Duncan Rhodes</span>
+                </div>
+              </div>
+              <div class="skeleton row"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="section-title eczar reveal">What you can do</h2>
+        <p class="section-subtitle reveal" style="--d:60ms">Accurate matches, clean organisation, tasteful UI.</p>
+
+        <div class="features-grid">
+          <article class="card reveal">
+            <h3>Paint Converter</h3>
+            <p>Closest matches across brands using perceptual distance (ΔE-LAB) with brand/finish filters and confidence %.</p>
+          </article>
+          <article class="card reveal" style="--d:60ms">
+            <h3>My Paints</h3>
+            <p>Track owned & wishlist paints, set low-stock flags, and keep your library tidy—works offline.</p>
+          </article>
+          <article class="card reveal" style="--d:120ms">
+            <h3>Palettes</h3>
+            <p>Create paint recipes and inspiration palettes. Share sets and reuse steps across projects.</p>
+          </article>
+          <article class="card reveal" style="--d:180ms">
+            <h3>AI Tools</h3>
+            <p>Smarter substitutions and palette hints. Free tier includes demo credits; Premium lifts limits.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Converter Showcase -->
+    <section class="section alt" id="converter">
+      <div class="container split">
+        <div class="copy">
+          <h2 class="eczar reveal">Accurate cross-brand matches</h2>
+          <p class="reveal" style="--d:60ms">
+            Use ΔE in LAB space for perceptual accuracy. Sort by confidence, limit to paints you own, and tap to compare.
+          </p>
+          <ul class="bullets reveal" style="--d:120ms">
+            <li>ΔE-LAB distance + confidence %</li>
+            <li>Brand & finish filters</li>
+            <li>Mix suggestions for tricky hues</li>
+            <li>Fast, offline-friendly core</li>
+          </ul>
+          <a class="btn btn-primary reveal" style="--d:180ms" href="#download">Try it</a>
+        </div>
+        <div class="visual reveal" style="--d:120ms">
+          <div class="mock chart">
+            <div class="bar" style="--v:91%"></div>
+            <div class="bar" style="--v:84%"></div>
+            <div class="bar" style="--v:83%"></div>
+            <div class="bar" style="--v:81%"></div>
+            <div class="bar" style="--v:78%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Palettes -->
+    <section class="section" id="palettes">
+      <div class="container split">
+        <div class="visual reveal">
+          <div class="palette-wheel">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+            <div class="center-dot"></div>
+          </div>
+        </div>
+        <div class="copy">
+          <h2 class="eczar reveal">Palette tools you’ll love</h2>
+          <p class="reveal" style="--d:60ms">
+            Generate complementary, triadic, or tetradic schemes—then fill with real paints you own.
+          </p>
+          <div class="tag-list reveal" style="--d:120ms">
+            <span class="tag">Color Harmony</span>
+            <span class="tag">Paint Recipes</span>
+            <span class="tag">Share & Export</span>
+          </div>
+          <a class="btn btn-ghost reveal" style="--d:160ms" href="#features">See all features</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section alt" id="pricing">
+      <div class="container">
+        <h2 class="section-title eczar reveal">Simple pricing</h2>
+        <p class="section-subtitle reveal" style="--d:60ms">Start free. Upgrade when you need more power.</p>
+        <div class="pricing">
+          <div class="price-card reveal">
+            <h3>Free</h3>
+            <p class="price">$0</p>
+            <ul class="bullets">
+              <li>Converter & basic palettes</li>
+              <li>Limited inventory</li>
+              <li>AI demo credits</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Get Started</a>
+          </div>
+          <div class="price-card featured reveal" style="--d:80ms">
+            <div class="badge">Recommended</div>
+            <h3>Premium</h3>
+            <p class="price">$X.99 / mo</p>
+            <ul class="bullets">
+              <li>Unlimited inventory & palettes</li>
+              <li>Advanced color matching & mixes</li>
+              <li>150 AI credits / month</li>
+              <li>Vision (10 images / month)</li>
+            </ul>
+            <a class="btn btn-primary" href="#download">Go Premium</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maker (matches in-app Maker’s Note) -->
+    <section class="section" id="maker">
+      <div class="container">
+        <div class="maker-card reveal">
+          <div class="maker-head">
+            <div class="crown" aria-hidden="true">👑</div>
+            <h2 class="eczar">From the maker</h2>
+          </div>
+          <p>
+            Hey! I’m <strong>Bas</strong>, a UX/UI designer from Belgium. I’ve been building <strong>BrushForge</strong> nights &amp; weekends to make converting and organising paints easier.
+            If something feels off or you’ve got an idea, I’d love to hear it.
+          </p>
+          <p class="dim">
+            Sorry for Premium and the ads — they help keep the servers running… and fund my questionable paint addiction.
+          </p>
+          <div class="maker-ctas">
+            <a class="btn btn-blue" href="mailto:support@brushforge.app">Send Feedback</a>
+            <a class="btn btn-ghost" href="#download">Share BrushForge</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="download-card reveal">
+          <div class="left">
+            <h2 class="eczar">Download BrushForge</h2>
+            <p>iPhone &amp; iPad • iOS 17+</p>
+            <div class="badges">
+              <a class="store-badge" href="#"><div class="badge-placeholder">App Store</div></a>
+              <a class="store-badge" href="#"><div class="badge-placeholder alt">TestFlight</div></a>
+            </div>
+          </div>
+          <div class="right">
+            <div class="qr placeholder" aria-hidden="true">QR</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="container">
+        <h2 class="section-title eczar reveal">FAQ</h2>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Which paint brands are supported?</summary>
+            <p>Citadel, Vallejo, Army Painter, AK, AK Real Colors, Duncan Rhodes, Green Stuff World, Kimera Kolors, and Privateer Press (P3).</p>
+          </details>
+          <details class="reveal" style="--d:60ms">
+            <summary>Do AI features require internet?</summary>
+            <p>Core features work offline; AI calls require connectivity and use a small credit system.</p>
+          </details>
+          <details class="reveal" style="--d:120ms">
+            <summary>How accurate are matches?</summary>
+            <p>Matches use LAB ΔE distance and show confidence %. Filter by brand, finish, or owned paints.</p>
+          </details>
+          <details class="reveal" style="--d:180ms">
+            <summary>Is BrushForge affiliated with Games Workshop?</summary>
+            <p>No — BrushForge is an independent tool for hobbyists and is not affiliated with Games Workshop.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="brand-col">
+        <a href="/" class="brand">
+          <span class="logo-orb"></span>
+          <span class="brand-text eczar">BrushForge</span>
+        </a>
+        <p class="small">© <span id="year"></span> BrushForge. All rights reserved.</p>
+        <p class="tiny">Warhammer and all associated names are trademarks of Games Workshop. BrushForge is not affiliated with or endorsed by Games Workshop.</p>
+      </div>
+      <div class="links">
+        <h4>Links</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#download">Download</a>
+      </div>
+      <div class="legal">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:support@brushforge.app">Support</a>
+      </div>
+      <div class="newsletter">
+        <h4>Get updates</h4>
+        <form class="inline-form" action="#" method="post" onsubmit="event.preventDefault(); subscribe(event);">
+          <input type="email" name="email" placeholder="Your email" required />
+          <button class="btn btn-primary" type="submit">Notify me</button>
+        </form>
+        <p class="tiny">We’ll only email you about BrushForge. No spam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
