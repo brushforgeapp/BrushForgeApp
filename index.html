@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BrushForge — Miniature Paint Companion</title>
   <meta name="description" content="BrushForge helps miniature painters convert colors across brands, build palettes, track inventory, and use AI tools — with ΔE-LAB accuracy." />
+
+  <!-- Font preloading (no FOUT) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap">
+  </noscript>
+
   <link rel="stylesheet" href="assets/css/styles.css" />
   <meta property="og:title" content="BrushForge — Miniature Paint Companion" />
   <meta property="og:description" content="Accurate paint converter, palettes, inventory, and AI tools for hobbyists." />
@@ -18,7 +27,7 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="/" class="brand">
+      <a href="/" class="brand" aria-label="BrushForge home">
         <span class="logo-orb" aria-hidden="true"></span>
         <span class="brand-text eczar">BrushForge</span>
       </a>
@@ -65,9 +74,14 @@
             <div class="screen">
               <div class="skeleton header"></div>
               <div class="skeleton row"></div>
-              <div class="seg-pills">
-                <span class="seg on">All</span><span class="seg">Owned</span><span class="seg">Wishlist</span>
+
+              <!-- Real segmented control -->
+              <div class="segment" aria-label="Filter results">
+                <button class="seg on" type="button">All</button>
+                <button class="seg" type="button">Owned</button>
+                <button class="seg" type="button">Wishlist</button>
               </div>
+
               <div class="glass card">
                 <div class="tag">Convert to</div>
                 <div class="chips">
@@ -79,7 +93,19 @@
                   <span class="chip">Duncan Rhodes</span>
                 </div>
               </div>
-              <div class="skeleton row"></div>
+
+              <!-- Confidence chip sample -->
+              <div class="glass card" aria-label="Example match">
+                <div style="display:flex; align-items:center; gap:10px">
+                  <div class="skeleton" style="width:40px;height:40px;border-radius:10px"></div>
+                  <div style="flex:1">
+                    <div class="skeleton" style="height:12px;border-radius:8px;margin-bottom:6px"></div>
+                    <div class="skeleton" style="width:60%;height:10px;border-radius:8px"></div>
+                  </div>
+                  <span class="conf" aria-label="Confidence 88 percent">88% <small>ΔE 2.8</small></span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -141,6 +167,18 @@
       </div>
     </section>
 
+    <!-- Screenshots carousel -->
+    <section class="section" aria-label="App screenshots">
+      <div class="container">
+        <div class="shots">
+          <figure><img src="assets/img/screenshots/converter.png" alt="Converter screen"></figure>
+          <figure><img src="assets/img/screenshots/palettes.png" alt="Palettes screen"></figure>
+          <figure><img src="assets/img/screenshots/profile.png" alt="Profile screen"></figure>
+          <figure><img src="assets/img/screenshots/matches.png" alt="Matches screen"></figure>
+        </div>
+      </div>
+    </section>
+
     <!-- Palettes -->
     <section class="section" id="palettes">
       <div class="container split">
@@ -155,7 +193,7 @@
         <div class="copy">
           <h2 class="eczar reveal">Palette tools you’ll love</h2>
           <p class="reveal" style="--d:60ms">
-            Generate complementary, triadic, or tetradic schemes—then fill with real paints you own.
+            Generate complementary, triadic, or tetradic schemes — then fill with real paints you own.
           </p>
           <div class="tag-list reveal" style="--d:120ms">
             <span class="tag">Color Harmony</span>
@@ -199,12 +237,12 @@
       </div>
     </section>
 
-    <!-- Maker (matches in-app Maker’s Note) -->
+    <!-- Maker -->
     <section class="section" id="maker">
       <div class="container">
         <div class="maker-card reveal">
           <div class="maker-head">
-            <div class="crown" aria-hidden="true">👑</div>
+            <div class="avatar" aria-hidden="true"></div>
             <h2 class="eczar">From the maker</h2>
           </div>
           <p>
@@ -218,6 +256,18 @@
             <a class="btn btn-blue" href="mailto:support@brushforge.app">Send Feedback</a>
             <a class="btn btn-ghost" href="#download">Share BrushForge</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Tab preview (mirrors app) -->
+    <section class="section" aria-label="Bottom tab preview">
+      <div class="container">
+        <div class="tab-preview">
+          <button class="tab on" type="button">Converter</button>
+          <button class="tab" type="button">My Paints</button>
+          <button class="tab" type="button">Palettes</button>
+          <button class="tab" type="button">Profile</button>
         </div>
       </div>
     </section>
