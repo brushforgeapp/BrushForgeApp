@@ -190,58 +190,7 @@ img{max-width:100%;display:block}
 .palette-wheel .r3{inset:36px; border:12px solid transparent; border-top-color:#b388ff; border-right-color:#69f0ae; transform:rotate(-15deg)}
 .palette-wheel .center-dot{position:absolute; inset:50% auto auto 50%; width:14px; height:14px; background:#fff; border-radius:50%; transform:translate(-50%,-50%)}
 
-/* ===== New: Pricing v2 (matches in-app) ===== */
-
-/* Benefits card */
-.benefits{border-radius:18px; padding:18px; margin-bottom:16px}
-.benefits h3{margin:0 0 .5rem}
-.benefit-list{list-style:none; padding:0; margin:10px 0 8px; display:grid; gap:10px}
-.benefit-list li{display:flex; align-items:center; gap:10px; color:var(--ink)}
-.benefit-list .i{
-  width:26px; height:26px; display:grid; place-items:center; border-radius:999px;
-  background:#2a2012; border:1px solid #7c5a22; color:#f7e29a; box-shadow:var(--pill-active-glow);
-  font-size:14px;
-}
-.smallprint{margin-top:8px}
-
-/* Plan cards */
-.pricing-v2{display:grid; gap:12px; margin-top:14px}
-.plan-card{
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
-  padding:16px; border-radius:18px; cursor:pointer; text-align:left;
-  background:var(--glass); border:1px solid #2a3241;
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-}
-.plan-card:hover{transform:translateY(-2px); border-color:#3b465a}
-.plan-left{display:flex; align-items:center; gap:12px}
-.plan-icon{
-  width:36px; height:36px; display:grid; place-items:center; border-radius:12px;
-  background:#1a1f29; border:1px solid #2c3342; font-size:18px
-}
-.plan-copy .title{font-weight:700}
-.plan-copy .sub{color:var(--ink-dim); font-size:.95rem}
-.plan-price .amount{font-weight:800; font-size:1.05rem}
-
-/* Featured (Lifetime) with gold outline + badge */
-.plan-card.featured{
-  border:1px solid #7c5a22;
-  box-shadow:var(--pill-active-glow), 0 10px 40px rgba(0,0,0,.35);
-  background:
-    linear-gradient(var(--glass), var(--glass)) padding-box,
-    linear-gradient(180deg,#e8a84455,#f4d47a33) border-box;
-}
-.badge.best{
-  display:inline-block; margin-left:8px; padding:2px 8px; font-size:.8rem; border-radius:999px;
-  background:#2a2012; color:#ffe7b0; border:1px solid #7c5a22;
-}
-
-/* Restore / continue */
-.pricing-actions{display:flex; align-items:center; gap:18px; margin-top:12px}
-.pricing-actions .restore{color:#5fb0ff; text-decoration:none; font-weight:600}
-.pricing-actions .restore:hover{text-decoration:underline}
-.pricing-actions .continue{color:#c9d2e3; opacity:.9}
-
-/* Old pricing cards (kept for other sections if needed) */
+/* Pricing */
 .pricing{display:grid; grid-template-columns:1fr 1fr; gap:18px}
 .price-card{border-radius:16px; padding:20px}
 .price-card .price{font-size:32px; margin:.25rem 0 1rem}
@@ -285,4 +234,42 @@ img{max-width:100%;display:block}
 
 /* Download */
 .download-card{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; border-radius:16px; padding:20px}
-.download-card .qr.placeholder{h
+.download-card .qr.placeholder{height:160px; display:grid; place-items:center; border-radius:12px; border:1px dashed rgba(255,255,255,.2); color:var(--ink-dim)}
+
+/* FAQ */
+.faq details{border-radius:12px; padding:12px 14px; margin-bottom:10px}
+.faq summary{cursor:pointer; font-weight:600}
+.faq p{color:var(--ink-dim)}
+
+/* Footer */
+.site-footer{padding:48px 0; background:#0a0c10; border-top:1px solid var(--stroke)}
+.footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr 2fr; gap:24px; align-items:flex-start}
+.footer-grid h4{margin:0 0 10px}
+.footer-grid a{display:block; color:var(--ink-dim); margin:6px 0}
+.small{color:var(--ink-dim)}
+.tiny{color:#9bb0d9; font-size:.8rem}
+.inline-form{display:flex; gap:10px}
+.inline-form input{flex:1; padding:12px 12px; border-radius:10px; border:1px solid var(--stroke); background:#11141b; color:var(--ink)}
+.inline-form input:focus{outline:none; box-shadow:var(--ring)}
+
+/* Reveal-on-scroll */
+.reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease; transition-delay:var(--d,0ms)}
+.reveal.in{opacity:1; transform:none}
+
+/* Responsive */
+@media (max-width: 1000px){
+  .hero .hero-content{grid-template-columns:1fr; text-align:center}
+  .device-frame{margin-inline:auto}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  .pricing{grid-template-columns:1fr}
+  .download-card{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 720px){
+  .site-nav{position:fixed; inset:64px 0 auto 0; background:rgba(11,13,18,.98); backdrop-filter:blur(10px); border-bottom:1px solid var(--stroke); padding:16px; display:none; flex-direction:column; gap:12px}
+  .site-nav.open{display:flex}
+  .nav-toggle{display:inline-block}
+  .features-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
