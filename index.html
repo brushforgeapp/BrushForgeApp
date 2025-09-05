@@ -6,7 +6,7 @@
   <title>BrushForge — Miniature Paint Companion</title>
   <meta name="description" content="BrushForge helps miniature painters convert colors across brands, build palettes, track inventory, and use AI tools — with ΔE-LAB accuracy." />
 
-  <!-- Font preloading (no FOUT) -->
+  <!-- Font preloading -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap"
@@ -75,7 +75,7 @@
               <div class="skeleton header"></div>
               <div class="skeleton row"></div>
 
-              <!-- Real segmented control -->
+              <!-- Segmented control -->
               <div class="segment" aria-label="Filter results">
                 <button class="seg on" type="button">All</button>
                 <button class="seg" type="button">Owned</button>
@@ -205,69 +205,64 @@
       </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- Pricing (same visual style; new content & Lifetime) -->
     <section class="section alt" id="pricing">
       <div class="container">
-        <h2 class="section-title eczar reveal">Premium</h2>
+        <h2 class="section-title eczar reveal">Choose your plan</h2>
         <p class="section-subtitle reveal" style="--d:60ms">Paint smarter. Support a solo hobbyist dev.</p>
 
-        <!-- Benefits card (matches in-app "Everything you need…") -->
-        <div class="benefits card reveal">
-          <h3>Everything you need for pro results</h3>
-          <ul class="benefit-list">
-            <li><span class="i">∞</span> Unlimited paints, palettes &amp; recipes</li>
-            <li><span class="i">✨</span> 150 AI credits / month</li>
-            <li><span class="i">🖼️</span> Vision paint recognition (10 images/month)</li>
-            <li><span class="i">✋</span> No ads. No trackers.</li>
-          </ul>
-          <p class="dim smallprint">
-            Your purchase directly supports BrushForge’s development and helps me keep building great tools for the community.
-          </p>
+        <div class="pricing">
+          <!-- Free -->
+          <div class="price-card reveal">
+            <h3>Free</h3>
+            <p class="price">0&nbsp;€</p>
+            <ul class="bullets">
+              <li>Paint converter</li>
+              <li>Basic palettes</li>
+              <li>Limited inventory</li>
+              <li>AI demo credits</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Get Started</a>
+          </div>
+
+          <!-- Premium Lifetime (featured) -->
+          <div class="price-card featured reveal" style="--d:60ms">
+            <div class="badge">Best value</div>
+            <h3>Premium Lifetime</h3>
+            <p class="price">29,99&nbsp;€ <span class="tiny" style="display:block;margin-top:4px">One-time unlock + monthly credits</span></p>
+            <ul class="bullets">
+              <li>Unlimited paints, palettes & recipes</li>
+              <li>150 AI credits / month</li>
+              <li>Vision paint recognition (10 images/month)</li>
+              <li>No ads. No trackers.</li>
+            </ul>
+            <a class="btn btn-primary" href="#download">Get Lifetime</a>
+          </div>
         </div>
 
-        <!-- Plans (lifetime + monthly) -->
-        <div class="pricing-v2">
-          <!-- Lifetime - featured -->
-          <button class="plan-card featured reveal" type="button" aria-label="Premium Lifetime 29,99 €">
-            <div class="plan-left">
-              <div class="plan-icon crown">👑</div>
-              <div class="plan-copy">
-                <div class="title">Premium <strong>Lifetime</strong> <span class="badge best">Best value</span></div>
-                <div class="sub">One-time unlock + monthly credits</div>
-              </div>
-            </div>
-            <div class="plan-price">
-              <span class="amount">29,99&nbsp;€</span>
-            </div>
-          </button>
+        <!-- A second row with Monthly to keep layout balanced on desktop -->
+        <div class="pricing" style="margin-top:18px">
+          <!-- Premium Monthly -->
+          <div class="price-card reveal">
+            <h3>Premium Monthly</h3>
+            <p class="price">3,99&nbsp;€ / mo</p>
+            <ul class="bullets">
+              <li>150 monthly AI credits</li>
+              <li>All Premium features</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Start Monthly</a>
+          </div>
 
-          <!-- Monthly -->
-          <button class="plan-card reveal" style="--d:80ms" type="button" aria-label="Premium Monthly 3,99 €">
-            <div class="plan-left">
-              <div class="plan-icon calendar">📅</div>
-              <div class="plan-copy">
-                <div class="title">Premium <strong>Monthly</strong></div>
-                <div class="sub">150 monthly AI credits, cancel anytime</div>
-              </div>
-            </div>
-            <div class="plan-price">
-              <span class="amount">3,99&nbsp;€</span>
-            </div>
-          </button>
+          <!-- Spacer card for symmetry on large screens (optional) -->
+          <div class="price-card reveal" aria-hidden="true" style="opacity:.001; pointer-events:none"></div>
         </div>
 
-        <!-- Restore + continue -->
-        <div class="pricing-actions reveal" style="--d:140ms">
-          <a class="restore" href="#restore">↻ Restore Purchases</a>
-          <div class="continue">Continue for now</div>
-        </div>
-
-        <p class="tiny legal dim reveal" style="--d:180ms">
+        <p class="tiny legal dim reveal" style="--d:120ms; margin-top:8px">
           Payment is handled by Apple. Subscriptions renew automatically until canceled in Settings. Prices may vary by region.
         </p>
       </div>
     </section>
-
 
     <!-- Maker -->
     <section class="section" id="maker">
@@ -292,7 +287,7 @@
       </div>
     </section>
 
-    <!-- Bottom Tab preview (mirrors app) -->
+    <!-- Bottom Tab preview -->
     <section class="section" aria-label="Bottom tab preview">
       <div class="container">
         <div class="tab-preview">
@@ -357,6 +352,7 @@
           <span class="brand-text eczar">BrushForge</span>
         </a>
         <p class="small">© <span id="year"></span> BrushForge. All rights reserved.</p>
+        <p class="tiny">Warhammer and all associated names are trademarks of Games Workshop. BrushForge is not affiliated with or endorsed by Games Workshop.</p>
       </div>
       <div class="links">
         <h4>Links</h4>
