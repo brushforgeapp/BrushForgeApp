@@ -208,34 +208,66 @@
     <!-- Pricing -->
     <section class="section alt" id="pricing">
       <div class="container">
-        <h2 class="section-title eczar reveal">Simple pricing</h2>
-        <p class="section-subtitle reveal" style="--d:60ms">Start free. Upgrade when you need more power.</p>
-        <div class="pricing">
-          <div class="price-card reveal">
-            <h3>Free</h3>
-            <p class="price">$0</p>
-            <ul class="bullets">
-              <li>Converter & basic palettes</li>
-              <li>Limited inventory</li>
-              <li>AI demo credits</li>
-            </ul>
-            <a class="btn btn-ghost" href="#download">Get Started</a>
-          </div>
-          <div class="price-card featured reveal" style="--d:80ms">
-            <div class="badge">Recommended</div>
-            <h3>Premium</h3>
-            <p class="price">$X.99 / mo</p>
-            <ul class="bullets">
-              <li>Unlimited inventory & palettes</li>
-              <li>Advanced color matching & mixes</li>
-              <li>150 AI credits / month</li>
-              <li>Vision (10 images / month)</li>
-            </ul>
-            <a class="btn btn-primary" href="#download">Go Premium</a>
-          </div>
+        <h2 class="section-title eczar reveal">Premium</h2>
+        <p class="section-subtitle reveal" style="--d:60ms">Paint smarter. Support a solo hobbyist dev.</p>
+
+        <!-- Benefits card (matches in-app "Everything you need…") -->
+        <div class="benefits card reveal">
+          <h3>Everything you need for pro results</h3>
+          <ul class="benefit-list">
+            <li><span class="i">∞</span> Unlimited paints, palettes &amp; recipes</li>
+            <li><span class="i">✨</span> 150 AI credits / month</li>
+            <li><span class="i">🖼️</span> Vision paint recognition (10 images/month)</li>
+            <li><span class="i">✋</span> No ads. No trackers.</li>
+          </ul>
+          <p class="dim smallprint">
+            Your purchase directly supports BrushForge’s development and helps me keep building great tools for the community.
+          </p>
         </div>
+
+        <!-- Plans (lifetime + monthly) -->
+        <div class="pricing-v2">
+          <!-- Lifetime - featured -->
+          <button class="plan-card featured reveal" type="button" aria-label="Premium Lifetime 29,99 €">
+            <div class="plan-left">
+              <div class="plan-icon crown">👑</div>
+              <div class="plan-copy">
+                <div class="title">Premium <strong>Lifetime</strong> <span class="badge best">Best value</span></div>
+                <div class="sub">One-time unlock + monthly credits</div>
+              </div>
+            </div>
+            <div class="plan-price">
+              <span class="amount">29,99&nbsp;€</span>
+            </div>
+          </button>
+
+          <!-- Monthly -->
+          <button class="plan-card reveal" style="--d:80ms" type="button" aria-label="Premium Monthly 3,99 €">
+            <div class="plan-left">
+              <div class="plan-icon calendar">📅</div>
+              <div class="plan-copy">
+                <div class="title">Premium <strong>Monthly</strong></div>
+                <div class="sub">150 monthly AI credits, cancel anytime</div>
+              </div>
+            </div>
+            <div class="plan-price">
+              <span class="amount">3,99&nbsp;€</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Restore + continue -->
+        <div class="pricing-actions reveal" style="--d:140ms">
+          <a class="restore" href="#restore">↻ Restore Purchases</a>
+          <div class="continue">Continue for now</div>
+        </div>
+
+        <p class="tiny legal dim reveal" style="--d:180ms">
+          Payment is handled by Apple. Subscriptions renew automatically until canceled in Settings. Prices may vary by region.
+        </p>
       </div>
     </section>
+
 
     <!-- Maker -->
     <section class="section" id="maker">
