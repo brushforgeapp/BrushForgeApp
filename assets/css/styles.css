@@ -1,4 +1,4 @@
-/* ===== BrushForge Web Palette (matches app vibe) ===== */
+/* ===== BrushForge Web Palette ===== */
 :root{
   --bg:#0b0d12;
   --bg-2:#0f1218;
@@ -40,8 +40,14 @@ body{
 .eczar{font-family:Eczar, serif}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
+:focus-visible{outline:none; box-shadow:0 0 0 3px rgba(232,168,68,.45); border-radius:12px}
 
 .container{width:100%;max-width:var(--max);padding:0 20px;margin-inline:auto}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important; transition:none!important}
+}
 
 /* Subtle grain */
 .grain{
@@ -61,17 +67,26 @@ img{max-width:100%;display:block}
 .site-nav a{opacity:.9}
 .site-nav a:hover{opacity:1}
 
-/* Buttons */
+/* Buttons (pressable gold) */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   padding:12px 16px; border-radius:12px; border:1px solid var(--stroke);
   background:linear-gradient(180deg,#171b23,#12161d); color:var(--ink); transition:.18s;
 }
-.btn:hover{transform:translateY(-1px)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(-1px)}
 .btn-primary{
+  position:relative;
   border:0;
   background:linear-gradient(180deg,var(--gold-1), var(--gold-2));
-  color:#1b150b; font-weight:700; box-shadow:var(--gold-glow);
+  color:#1b150b; font-weight:700; box-shadow:var(--gold-glow), inset 0 1px 0 #fff6;
+}
+.btn-primary:active{transform:translateY(1px); filter:saturate(1.05)}
+.btn-primary::after{
+  content:""; position:absolute; inset:-2px; border-radius:14px;
+  background:conic-gradient(from 140deg, #ffd89033, #e8a84422, #ffd89033);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude; padding:1px; opacity:.35;
 }
 .btn-ghost{background:transparent}
 .btn-blue{
@@ -80,22 +95,23 @@ img{max-width:100%;display:block}
 }
 .btn-small{padding:8px 12px; font-size:.9rem}
 
-/* Pills and chips */
+/* Pills & chips (tappable) */
 .pill-row{display:flex; flex-wrap:wrap; gap:8px}
 .pill{background:var(--pill); border:1px solid var(--pill-stroke); color:var(--ink-dim); padding:6px 10px; border-radius:999px; font-size:.85rem}
 .chips{display:flex; flex-wrap:wrap; gap:8px}
-.chip{background:#1d222c; border:1px solid var(--pill-stroke); border-radius:999px; padding:8px 12px; color:#cdd6e5}
+.chip{background:#1d222c; border:1px solid var(--pill-stroke); border-radius:999px; padding:10px 12px; color:#cdd6e5; transition:.15s; min-height:40px}
+.chip:hover{transform:translateY(-1px); border-color:#3b465a}
 .chip.active{background:#2a2012; color:#ffe7b0; box-shadow:var(--pill-active-glow); border-color:#7c5a22}
 
-/* Segmented control sample */
-.seg-pills{display:flex; gap:8px}
-.seg{background:#1a1f29; border:1px solid var(--pill-stroke); border-radius:999px; padding:6px 12px; color:#d1d8e6; font-size:.9rem}
-.seg.on{background:#2a2012; color:#ffe7b0; box-shadow:var(--pill-active-glow); border-color:#7c5a22}
+/* Segmented control */
+.segment{display:inline-flex; background:#171c25; border:1px solid #2c3342; padding:4px; border-radius:999px; gap:4px}
+.seg{padding:8px 14px; border:none; background:transparent; color:#d1d8e6; border-radius:999px; cursor:pointer}
+.seg.on{background:#2a2012; color:#ffe7b0; box-shadow:var(--pill-active-glow); border:1px solid #7c5a22}
 
 /* Hero */
 .hero{position:relative; overflow:hidden; padding:84px 0 40px}
 .hero .hero-content{display:grid; grid-template-columns: 1.05fr .95fr; gap:40px; align-items:center}
-.display{font-size: clamp(34px, 6vw, 64px); line-height:1.05; margin:0 0 12px}
+.display{font-size: clamp(34px, 6vw, 64px); line-height:1.05; margin:0 0 8px; letter-spacing:.2px}
 .display .accent{color:#f2d27a}
 .lead{font-size: clamp(16px, 2.5vw, 20px); color:var(--ink-dim); margin:0 0 20px}
 .cta-row{display:flex; gap:12px; margin-bottom:14px}
@@ -112,26 +128,59 @@ img{max-width:100%;display:block}
 .skeleton.header{height:38px; border-radius:12px}
 .skeleton.row{height:18px; border-radius:12px}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.glass.card{background:var(--glass); border:1px solid var(--stroke); border-radius:20px; padding:14px}
+.glass.card{
+  /* Gradient border + soft lighting */
+  background:var(--glass);
+  border:1px solid transparent;
+  background-image:
+    linear-gradient(var(--glass), var(--glass)),
+    linear-gradient(180deg,#2b3141,#171d28);
+  background-origin:border-box;
+  background-clip:padding-box,border-box;
+  border-radius:20px; padding:14px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 10px 40px rgba(0,0,0,.35);
+}
 .tag{color:#c9d2e3; margin-bottom:8px; font-weight:600; opacity:.9}
 
 /* Sections */
 .section{padding:72px 0}
 .section.alt{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00))}
-.section-title{font-size: clamp(24px, 4.2vw, 40px); margin:0 0 8px}
-.section-subtitle{color:var(--ink-dim); margin:0 0 28px}
+.section + .section.alt{position:relative}
+.section + .section.alt::before{
+  content:""; position:absolute; inset:-18px 0 auto 0; height:18px;
+  background:linear-gradient(180deg, transparent, rgba(255,255,255,.04)); pointer-events:none;
+}
+.section-title{font-size: clamp(24px, 4.2vw, 40px); margin:0 0 4px}
+.section-subtitle{color:var(--ink-dim); margin:0 0 18px}
 
+/* Cards (features/pricing/faq) with gradient borders + lighting */
+.card,.maker-card,.download-card,.faq details{
+  background:var(--glass);
+  border:1px solid transparent;
+  background-image:
+    linear-gradient(var(--glass), var(--glass)),
+    linear-gradient(180deg,#2b3141,#171d28);
+  background-origin:border-box;
+  background-clip:padding-box,border-box;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 10px 40px rgba(0,0,0,.35);
+}
 .features-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
-.card{background:var(--glass); border:1px solid var(--stroke); border-radius:16px; padding:18px}
+.card{border-radius:16px; padding:18px}
 .card h3{margin:.1rem 0 .4rem}
 .card p{color:var(--ink-dim)}
+.card:hover{transform:translateY(-2px)}
 
 /* Split layout */
 .split{display:grid; grid-template-columns: 1.05fr .95fr; gap:36px; align-items:center}
 .bullets{padding-left:18px; line-height:1.8}
 .bullets li{margin:4px 0; color:var(--ink-dim)}
-.mock.chart{display:flex; gap:8px; align-items:flex-end; height:180px; background:var(--glass); border:1px solid var(--stroke); border-radius:14px; padding:12px}
+.mock.chart{display:flex; gap:8px; align-items:flex-end; height:180px; border-radius:14px; padding:12px}
 .mock.chart .bar{width:14%; height:var(--v); background:linear-gradient(180deg,var(--gold-1), var(--gold-2)); border-radius:10px}
+
+/* Screenshots carousel */
+.shots{display:grid; grid-auto-flow:column; gap:14px; overflow:auto; padding-bottom:6px; scroll-snap-type:x mandatory}
+.shots figure{scroll-snap-align:start; margin:0; background:#0e1219; border:1px solid #222a37; border-radius:22px; padding:10px; min-width:260px}
+.shots img{border-radius:18px}
 
 /* Palettes */
 .palette-wheel{position:relative; width:260px; aspect-ratio:1; margin:auto; filter:drop-shadow(0 10px 40px rgba(0,0,0,.4))}
@@ -143,24 +192,52 @@ img{max-width:100%;display:block}
 
 /* Pricing */
 .pricing{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-.price-card{background:var(--glass); border:1px solid var(--stroke); border-radius:16px; padding:20px}
+.price-card{border-radius:16px; padding:20px}
 .price-card .price{font-size:32px; margin:.25rem 0 1rem}
 .price-card .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(232,168,68,.15); border:1px solid rgba(232,168,68,.4); font-size:.8rem; margin-bottom:8px}
 .price-card.featured{background:linear-gradient(180deg, rgba(232,168,68,.10), rgba(244,212,122,.10)); border-color:transparent; box-shadow:var(--gold-glow)}
 
 /* Maker card */
-.maker-card{background:var(--glass); border:1px solid var(--stroke); border-radius:18px; padding:20px}
+.maker-card{border-radius:18px; padding:20px}
 .maker-head{display:flex; align-items:center; gap:10px; margin-bottom:6px}
-.maker-head .crown{width:28px; height:28px; display:grid; place-items:center; background:#2a2012; border:1px solid #7c5a22; border-radius:999px; box-shadow:var(--pill-active-glow)}
+.maker-head .avatar{
+  width:28px;height:28px;border-radius:50%;
+  background:url(assets/img/bas.jpg) center/cover,#2a2012;
+  border:1px solid #7c5a22; box-shadow:var(--pill-active-glow)
+}
 .maker-card .dim{color:var(--ink-dim)}
 .maker-ctas{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
 
+/* Download badges improved */
+.store-badge .badge-placeholder{
+  border:1px solid #2a3241; border-radius:12px; padding:10px 14px; color:var(--ink-dim);
+  background:#131821; box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.store-badge .badge-placeholder.alt{
+  background:#10223a; border-color:#254a80; color:#cfe0ff;
+}
+
+/* Bottom tabs preview */
+.tab-preview{
+  display:flex; gap:10px; padding:14px; border-radius:18px;
+  background:#10141c; border:1px solid #222a37; justify-content:center
+}
+.tab{padding:10px 14px; border-radius:14px; background:#1a1f29; border:1px solid #2c3342; color:#cfd7e6}
+.tab.on{background:#2a2012; color:#ffe7b0; box-shadow:var(--pill-active-glow); border-color:#7c5a22}
+
+/* Confidence chip */
+.conf{
+  margin-left:auto; font-weight:700; color:#f6de93;
+  background:#2a2012; border:1px solid #7c5a22; border-radius:10px; padding:6px 10px; text-align:right; min-width:70px
+}
+.conf small{display:block; color:#e9c372; opacity:.75; font-weight:600}
+
 /* Download */
-.download-card{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; background:var(--glass); border:1px solid var(--stroke); border-radius:16px; padding:20px}
+.download-card{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; border-radius:16px; padding:20px}
 .download-card .qr.placeholder{height:160px; display:grid; place-items:center; border-radius:12px; border:1px dashed rgba(255,255,255,.2); color:var(--ink-dim)}
 
 /* FAQ */
-.faq details{background:var(--glass); border:1px solid var(--stroke); border-radius:12px; padding:12px 14px; margin-bottom:10px}
+.faq details{border-radius:12px; padding:12px 14px; margin-bottom:10px}
 .faq summary{cursor:pointer; font-weight:600}
 .faq p{color:var(--ink-dim)}
 
