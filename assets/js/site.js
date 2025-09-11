@@ -43,13 +43,3 @@ document.addEventListener('click', async (e) => {
     }
   } catch {}
 });
-
-
-// Accessibility for FAQ
-document.addEventListener('click', (e) => {
-  const q = e.target.closest('.faq .q');
-  if (!q) return;
-  const item = q.closest('.item');
-  const open = item.classList.toggle('open');
-  q.setAttribute('aria-expanded', open ? 'true' : 'false');
-});
