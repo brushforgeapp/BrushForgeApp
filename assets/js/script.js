@@ -1,47 +1,55 @@
-// Year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
 
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.site-nav');
-if (toggle) {
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-}
-
-// Reveal-on-scroll
-const reveals = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.15 });
-reveals.forEach(el => io.observe(el));
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', (e) => {
-    const id = a.getAttribute('href');
-    if (id.length > 1) {
-      e.preventDefault();
-      document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      nav.classList.remove('open');
-      toggle?.setAttribute('aria-expanded', 'false');
-    }
-  });
+// Smooth scroll for in-page anchors
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  const id = a.getAttribute('href');
+  if (id.length > 1 && document.querySelector(id)) {
+    e.preventDefault();
+    document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+    history.pushState(null, '', id);
+  }
 });
 
-// Newsletter demo
-function subscribe(e){
-  const form = e.target.closest('form');
-  const email = form?.querySelector('input[type="email"]')?.value || '';
-  if (!email) return;
-  alert(`Thanks! We'll keep you posted at: ${email}`);
-  form.reset();
-}
-window.subscribe = subscribe;
+
+
+// FAQ accordion
+document.addEventListener('click', (e) => {
+  const q = e.target.closest('.faq .q');
+  if (!q) return;
+  const item = q.closest('.item');
+  item.classList.toggle('open');
+});
+
+
+
+// Share button
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-share]');
+  if (!btn) return;
+  e.preventDefault();
+  const shareData = {
+    title: 'BrushForge — Paint converter & toolkit',
+    text: 'I'm testing this app for miniature painters. Join the TestFlight beta:',
+    url: 'https://testflight.apple.com/join/2jnGZJss'
+  };
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else {
+      await navigator.clipboard.writeText(shareData.url);
+      btn.textContent = 'Link copied ✓';
+      setTimeout(() => (btn.textContent = 'Share BrushForge'), 1500);
+    }
+  } catch {}
+});
+
+
+// Accessibility for FAQ
+document.addEventListener('click', (e) => {
+  const q = e.target.closest('.faq .q');
+  if (!q) return;
+  const item = q.closest('.item');
+  const open = item.classList.toggle('open');
+  q.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
