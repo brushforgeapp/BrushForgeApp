@@ -3,54 +3,89 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — BrushForge</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#0b0d10">
+  <!-- Basic meta CSP as fallback; prefer real headers in hosting config -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+<title>Privacy Policy — BrushForge</title>
+  <meta name="description" content="Privacy-by-design with local mode, optional sync, and BYO key." />
+  <link rel="canonical" href="https://brushforge.app/privacy.html" />
+  <meta property="og:title" content="Privacy Policy — BrushForge" />
+  <meta property="og:description" content="Privacy-by-design with local mode, optional sync, and BYO key." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/match-overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <script defer src="assets/js/site.js"></script>
+  <link rel="manifest" href="site.webmanifest">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="brand"><span class="logo-orb"></span><span class="brand-text eczar">BrushForge</span></a>
-      <nav class="site-nav"><a href="/">Home</a></nav>
+
+<header class="header">
+  <div class="container nav">
+    <a href="/" class="brand">
+      <span class="logo"></span>
+      <span>BrushForge</span>
+    </a>
+    <nav class="navlinks">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#gallery">Screenshots</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#download" class="btn primary">Get the App</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1 class="h2">Privacy Policy</h1>
+    <p class="small">Effective: 2025-09-11</p>
+    <div class="card" style="margin-top:16px;">
+      <h3 class="kicker">Overview</h3>
+      <p>We collect the minimum necessary data to operate the app, process purchases, and improve performance.</p>
+      <hr class="sep" />
+      <h3 class="kicker">Data We Collect</h3>
+      <ul class="list">
+        <li><strong>Account & Purchases.</strong> Apple receipts and identifiers for in‑app purchases.</li>
+        <li><strong>Diagnostics.</strong> Crash logs and basic usage analytics.</li>
+        <li><strong>Cloud Sync.</strong> If enabled, your paints/palettes/recipes can sync via iCloud/CloudKit.</li>
+        <li><strong>AI Requests.</strong> Prompts are sent to our provider only to generate results. No reselling.</li>
+      </ul>
+      <hr class="sep" />
+      <h3 class="kicker">Third‑Party Services</h3>
+      <ul class="list">
+        <li>Apple App Store / StoreKit</li>
+        <li>iCloud / CloudKit</li>
+        <li>Firebase (optional)</li>
+        <li>OpenAI or compatible provider</li>
+        <li>AdMob (free tier, if enabled)</li>
+      </ul>
+      <hr class="sep" />
+      <h3 class="kicker">Your Choices</h3>
+      <ul class="list">
+        <li>Opt out of analytics in Settings</li>
+        <li>Local‑only mode (no sync)</li>
+        <li>Bring your own AI key</li>
+      </ul>
+      <hr class="sep" />
+      <p>Contact: <a href="mailto:support@brushforge.app">support@brushforge.app</a></p>
     </div>
-  </header>
+  </div>
+</main>
 
-  <main class="section">
-    <div class="container">
-      <article class="maker-card">
-        <h1 class="eczar" style="margin:0 0 .5rem">Privacy Policy</h1>
-        <p class="dim">Last updated: 2025-09-05</p>
-        <p>BrushForge values your privacy. This website collects minimal data for basic analytics and newsletter opt-ins.</p>
-
-        <h3>Data we process</h3>
-        <ul class="bullets">
-          <li><strong>Newsletter</strong>: email address (only if you submit the form).</li>
-          <li><strong>Analytics</strong>: aggregate usage (no personal profiling).</li>
-        </ul>
-
-        <h3>How we use it</h3>
-        <ul class="bullets">
-          <li>To send occasional product updates you opted into.</li>
-          <li>To understand which pages are useful and improve the site.</li>
-        </ul>
-
-        <h3>Data sharing</h3>
-        <p>We don’t sell personal data. Third-party processors (e.g., email service providers) are used only to deliver the services you request.</p>
-
-        <h3>Your rights</h3>
-        <p>You can request deletion of your newsletter data anytime by emailing <a href="brushforgeapp@gmail.com">brushforgeapp@gmail.com</a>.</p>
-
-        <h3>Contact</h3>
-        <p>Questions? Email <a href="mailto:brushforgeapp@gmail.com">brushforgeapp@gmail.com</a>.</p>
-      </article>
+<footer class="footer">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+<a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
     </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><p class="small">© <span id="year"></span> BrushForge.</p></div>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js" defer></script>
+  </div>
+</footer>
 </body>
 </html>
+
