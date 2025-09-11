@@ -1,0 +1,15 @@
+{
+  "name": "BrushForge",
+  "short_name": "BrushForge",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    {
+      "src": "assets/images/matches-list.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
