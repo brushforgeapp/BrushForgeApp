@@ -3,53 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Use — BrushForge</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#0b0d10">
+  <!-- Basic meta CSP as fallback; prefer real headers in hosting config -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+<title>Terms of Use — BrushForge</title>
+  <meta name="description" content="Terms of using the BrushForge app." />
+  <link rel="canonical" href="https://brushforge.app/terms.html" />
+  <meta property="og:title" content="Terms of Use — BrushForge" />
+  <meta property="og:description" content="Terms of using the BrushForge app." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/match-overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <script defer src="assets/js/site.js"></script>
+  <link rel="manifest" href="site.webmanifest">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="brand"><span class="logo-orb"></span><span class="brand-text eczar">BrushForge</span></a>
-      <nav class="site-nav"><a href="/">Home</a></nav>
+
+<header class="header">
+  <div class="container nav">
+    <a href="/" class="brand">
+      <span class="logo"></span>
+      <span>BrushForge</span>
+    </a>
+    <nav class="navlinks">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#gallery">Screenshots</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#download" class="btn primary">Get the App</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1 class="h2">Terms of Use</h1>
+    <p class="small">Effective: 2025-09-11</p>
+    <div class="card" style="margin-top:16px;">
+      <h3 class="kicker">License</h3>
+      <p>Personal, non‑transferable, non‑exclusive license to use the app.</p>
+      <hr class="sep" />
+      <h3 class="kicker">Subscriptions & Purchases</h3>
+      <p>Premium features via in‑app purchases or subscription. Manage via your Apple account.</p>
+      <hr class="sep" />
+      <h3 class="kicker">User Content</h3>
+      <p>You are responsible for the content you create and share.</p>
+      <hr class="sep" />
+      <h3 class="kicker">AI Features</h3>
+      <p>AI outputs may be inaccurate. Use discretion. You retain rights to your prompts and outputs as permitted by law.</p>
+      <hr class="sep" />
+      <h3 class="kicker">Disclaimer</h3>
+      <p>The app is provided “as is” without warranties. We are not liable for damages arising from use.</p>
+      <hr class="sep" />
+      <p>Contact: <a href="mailto:support@brushforge.app">support@brushforge.app</a></p>
     </div>
-  </header>
+  </div>
+</main>
 
-  <main class="section">
-    <div class="container">
-      <article class="maker-card">
-        <h1 class="eczar" style="margin:0 0 .5rem">Terms of Use</h1>
-        <p class="dim">Last updated: 2025-09-05</p>
-
-        <h3>1. Acceptance</h3>
-        <p>By using this site and the BrushForge app, you agree to these Terms.</p>
-
-        <h3>2. License</h3>
-        <p>BrushForge grants you a personal, non-transferable license to use the app and website. Reverse engineering and redistribution are not permitted.</p>
-
-        <h3>3. Content & Brands</h3>
-        <p>BrushForge is not affiliated with Games Workshop or other paint brands. Trademarks belong to their respective owners.</p>
-
-        <h3>4. AI Features</h3>
-        <p>AI-powered features may require connectivity and credits. Do not input sensitive information. Output may be imperfect—use discretion.</p>
-
-        <h3>5. Liability</h3>
-        <p>BrushForge is provided “as is” without warranties. We’re not liable for any damages resulting from use.</p>
-
-        <h3>6. Changes</h3>
-        <p>We may update these Terms. Continued use means you accept the changes.</p>
-
-        <h3>7. Contact</h3>
-        <p>Questions? <a href="mailto:brushforgeapp@gmail.com">brushforgeapp@gmail.com</a></p>
-      </article>
+<footer class="footer">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+<a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
     </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><p class="small">© <span id="year"></span> BrushForge.</p></div>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js" defer></script>
+  </div>
+</footer>
 </body>
 </html>
+
