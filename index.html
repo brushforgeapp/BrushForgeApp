@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="theme-color" content="#0b0d10">
-  <!-- Basic meta CSP as fallback; prefer real headers in hosting config -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
 <title>BrushForge — Clean & Accurate Paint Converter for Miniature Painters</title>
   <meta name="description" content="Switch paint brands with confidence. Build palettes and step‑by‑step recipes that map to the paints you actually own." />
@@ -49,7 +48,7 @@
         <h1 class="h1" style="margin:16px 0 12px;">Convert paints. Craft palettes. Save time.</h1>
         <p class="p-lg">BrushForge helps miniature painters jump between brands, manage collections, and generate color‑true palettes and recipes — fast, clear, and private by default.</p>
         <div style="display:flex; gap:12px; margin-top:22px;">
-          <a id="download" class="btn primary" href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow">Join TestFlight</a>
+          <a id="download" class="btn primary" href="https://testflight.apple.com/join/2jnGZJss">Join TestFlight</a>
           <a class="btn" href="#features">See features</a>
         </div>
         <div class="pills">
@@ -171,7 +170,8 @@
         <div class="card" style="border-color:#2b3340;">
           <div class="kicker">Premium</div>
           <h3 class="h2" style="font-size:28px; margin:8px 0 4px;">Everything</h3>
-<p class="p-lg" style="margin:6px 0;"><strong>$3.99/mo</strong> or <strong>$29.99</strong> lifetime</p><ul class="list">
+<p class="p-lg" style="margin:6px 0;"><strong>$3.99/mo</strong> or <strong>$29.99</strong> lifetime</p>
+          <ul class="list">
             <li>• Removes limits & ads</li>
             <li>• Advanced matching algorithms</li>
             <li>• AI recipes & palette suggestions</li>
@@ -189,7 +189,7 @@
       <h2 class="h2">Ready to paint smarter?</h2>
       <p class="p-lg">Join the TestFlight and help shape the release.</p>
       <div style="margin-top:12px;">
-        <a class="btn primary" href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow">Download TestFlight Build</a>
+        <a class="btn primary" href="https://testflight.apple.com/join/2jnGZJss">Download TestFlight Build</a>
       </div>
     </div>
   </section>
@@ -201,27 +201,21 @@
       <h2 class="h2">FAQ</h2>
       <div class="faq">
         <div class="item open">
-          <div class="q"><h4>Is the converter accurate?</h4><div class="toggle">+</div></div>
+          <div class="q" aria-expanded="true"><h4>Is the converter accurate?</h4><div class="toggle">+</div></div>
           <div class="a">
-            Matches are calculated with ΔE color distance and extra rules for type/finish. You can also rate matches so they improve over time.
+            Matches use ΔE (color distance) plus rules for type/finish. You can thumbs‑up/down matches to improve them over time.
           </div>
         </div>
         <div class="item">
-          <div class="q"><h4>What do I get for free?</h4><div class="toggle">+</div></div>
+          <div class="q" aria-expanded="false"><h4>What do I get for free?</h4><div class="toggle">+</div></div>
           <div class="a">
             Full converter, 50 owned paints, and up to 5 saved palettes/recipes.
           </div>
         </div>
         <div class="item">
-          <div class="q"><h4>What does Premium unlock?</h4><div class="toggle">+</div></div>
+          <div class="q" aria-expanded="false"><h4>What does Premium unlock?</h4><div class="toggle">+</div></div>
           <div class="a">
-            Removes limits & ads, advanced matching algorithms, and AI helpers for recipes and palettes.
-          </div>
-        </div>
-        <div class="item">
-          <div class="q"><h4>Will this work offline?</h4><div class="toggle">+</div></div>
-          <div class="a">
-            Your paints and palettes are stored locally; converters may require connectivity for the latest data.
+            Removes limits/ads and unlocks AI helpers for recipes and palettes.
           </div>
         </div>
       </div>
@@ -236,17 +230,17 @@
           <p class="p-lg">Hey! I’m <strong>Bas</strong>, a UX/UI designer from Belgium. I’ve been building <strong>BrushForge</strong> nights &amp; weekends to make converting and organising paints easier. If something feels off or you’ve got an idea, I’d love to hear it.</p>
           <p class="p">Sorry for Premium and the ads — they help keep the servers running… and fund my questionable paint addiction.</p>
           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
-            <a class="btn primary" href="mailto:brushforgeapp@gmail.com?subject=BrushForge%20feedback">Send Feedback</a>
+            <a class="btn primary" href="mailto:brushforgeapp@gmail.com?subject=BrushForge%20feedback" data-mailto>Send Feedback</a>
             <a class="btn ghost" href="#" data-share>Share BrushForge</a>
           </div>
-</div>
-        <img loading="lazy" decoding="async" src="assets/images/palettes.png" alt="BrushForge app preview" style="width:280px; border-radius:16px; border:1px solid var(--border); display:none;" class="hide-mobile">
+        </div>
+        <img loading="lazy" decoding="async" src="assets/images/palettes.png" alt="BrushForge app preview" class="hide-mobile" style="width:280px; border-radius:16px; border:1px solid var(--border);" />
       </div>
     </div>
   </section>
 <footer class="footer">
   <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-<a href="privacy.html">Privacy Policy</a>
+      <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms</a>
       <a href="support.html">Support</a>
     </div>
