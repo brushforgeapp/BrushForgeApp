@@ -3,353 +3,252 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BrushForge — Miniature Paint Companion</title>
-  <meta name="description" content="BrushForge helps miniature painters convert colors across brands, build palettes, track inventory, and use AI tools — with ΔE-LAB accuracy." />
-
-  <!-- Font preloading (no FOUT) -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap"
-        as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Inter:wght@400;600;700&display=swap">
-  </noscript>
-
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <meta property="og:title" content="BrushForge — Miniature Paint Companion" />
-  <meta property="og:description" content="Accurate paint converter, palettes, inventory, and AI tools for hobbyists." />
+  <meta name="theme-color" content="#0b0d10">
+  <!-- Basic meta CSP as fallback; prefer real headers in hosting config -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+<title>BrushForge — Clean & Accurate Paint Converter for Miniature Painters</title>
+  <meta name="description" content="Switch paint brands with confidence. Build palettes and step‑by‑step recipes that map to the paints you actually own." />
+  <link rel="canonical" href="https://brushforge.app/" />
+  <meta property="og:title" content="BrushForge — Clean & Accurate Paint Converter for Miniature Painters" />
+  <meta property="og:description" content="Switch paint brands with confidence. Build palettes and step‑by‑step recipes that map to the paints you actually own." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og-image.png" />
-  <meta name="theme-color" content="#0b0d12" />
-  <link rel="icon" href="assets/icons/favicon.svg" />
+  <meta property="og:image" content="assets/images/match-overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <script defer src="assets/js/site.js"></script>
+  <link rel="manifest" href="site.webmanifest">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="brand" aria-label="BrushForge home">
-        <span class="logo-orb" aria-hidden="true"></span>
-        <span class="brand-text eczar">BrushForge</span>
+
+<header class="header">
+  <div class="container nav">
+    <a href="/" class="brand">
+      <span class="logo"></span>
+      <span>BrushForge</span>
+    </a>
+    <nav class="navlinks">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#gallery">Screenshots</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download" class="btn primary">Get the App</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container grid grid-2" style="align-items:center;">
+      <div>
+        <span class="badge"><span class="dot"></span> iOS • SwiftUI</span>
+        <h1 class="h1" style="margin:16px 0 12px;">Convert paints. Craft palettes. Save time.</h1>
+        <p class="p-lg">BrushForge helps miniature painters jump between brands, manage collections, and generate color‑true palettes and recipes — fast, clear, and private by default.</p>
+        <div style="display:flex; gap:12px; margin-top:22px;">
+          <a id="download" class="btn primary" href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow">Join TestFlight</a>
+          <a class="btn" href="#features">See features</a>
+        </div>
+        <div class="pills">
+          <span class="pill">ΔE Color Science</span>
+          <span class="pill">My Paints</span>
+          <span class="pill">Palettes</span>
+          <span class="pill">AI Recipes</span>
+</div>
+      </div>
+      <div class="phone-frame">
+        <img loading="lazy" decoding="async" class="phone" src="assets/images/match-overview.png" alt="Match details screen" />
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="get-app" class="section">
+    <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+      <div>
+        <h2 class="h2">Get the app</h2>
+        <p class="p-lg">Join the TestFlight beta on iOS. Point your camera at the QR or tap the button.</p>
+        <div style="display:flex; gap:12px; align-items:center; margin-top:10px;">
+          <a class="btn primary" href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow">Join TestFlight</a>
+          <a class="btn ghost" href="#pricing">See pricing</a>
+        </div>
+      </div>
+      <a href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow" style="display:grid; place-items:center; background:#0e131b; border:1px solid var(--border); border-radius:18px; min-height:220px; text-decoration:none;">
+        <div style="text-align:center;">
+          <div style="width:180px; height:180px; background:repeating-conic-gradient(#0b0d10 0 10deg,#1a2230 10deg 20deg); border-radius:8px; margin:0 auto 10px; border:1px solid #2a3340;"></div>
+          <div class="small">Dummy QR • Opens TestFlight</div>
+        </div>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" role="navigation">
-        <a href="#features">Features</a>
-        <a href="#converter">Converter</a>
-        <a href="#palettes">Palettes</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#maker" class="btn btn-ghost">Maker</a>
-        <a href="#download" class="btn btn-primary btn-small">Get App</a>
-      </nav>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="home" aria-label="BrushForge">
-      <div class="grain" aria-hidden="true"></div>
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1 class="display eczar reveal">Paint <span class="accent">Converter</span>, Palettes & AI</h1>
-          <p class="lead reveal" style="--d:80ms">
-            Built for miniature painters. Convert colors across Citadel, Vallejo, Army Painter, AK and more using ΔE-LAB accuracy. Organise paints, build palettes, and use smart AI hints.
-          </p>
-          <div class="cta-row reveal" style="--d:160ms">
-            <a href="#download" class="btn btn-primary">Download</a>
-            <a href="#features" class="btn btn-ghost">Explore Features</a>
-          </div>
-          <div class="pill-row reveal" style="--d:220ms">
-            <span class="pill">ΔE-LAB matches</span>
-            <span class="pill">Mix suggestions</span>
-            <span class="pill">Owned filters</span>
-            <span class="pill">Offline core</span>
-          </div>
-        </div>
-
-        <!-- Phone mock in BrushForge style -->
-        <div class="hero-visual reveal" style="--d:240ms">
-          <div class="device-frame">
-            <div class="device-glow"></div>
-            <div class="screen">
-              <div class="skeleton header"></div>
-              <div class="skeleton row"></div>
-
-              <!-- Real segmented control -->
-              <div class="segment" aria-label="Filter results">
-                <button class="seg on" type="button">All</button>
-                <button class="seg" type="button">Owned</button>
-                <button class="seg" type="button">Wishlist</button>
-              </div>
-
-              <div class="glass card">
-                <div class="tag">Convert to</div>
-                <div class="chips">
-                  <span class="chip"><span class="icon-list" aria-hidden="true"></span>Brands</span>
-                  <span class="chip active">AK Interactive</span>
-                  <span class="chip">Army Painter</span>
-                  <span class="chip">Citadel</span>
-                  <span class="chip">Vallejo</span>
-                  <span class="chip">Duncan Rhodes</span>
-                </div>
-              </div>
-
-              <!-- Confidence chip sample -->
-              <div class="glass card" aria-label="Example match">
-                <div style="display:flex; align-items:center; gap:10px">
-                  <div class="skeleton" style="width:40px;height:40px;border-radius:10px"></div>
-                  <div style="flex:1">
-                    <div class="skeleton" style="height:12px;border-radius:8px;margin-bottom:6px"></div>
-                    <div class="skeleton" style="width:60%;height:10px;border-radius:8px"></div>
-                  </div>
-                  <span class="conf" aria-label="Confidence 88 percent">88% <small>ΔE 2.8</small></span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
+<section id="features" class="section">
+    <div class="container grid grid-2" style="align-items:center;">
+      <div class="phone-frame"><img loading="lazy" decoding="async" class="phone" src="assets/images/matches-list.png" alt="Paint matches list" /></div>
+      <div>
+        <h2 class="h2">Paint Converter</h2>
+        <p class="p-lg">Accurate brand‑to‑brand matches with confidence scores and ΔE values. Understand where hue, lightness, and chroma differ — so you can compensate on the model.</p>
+        <ul class="list">
+          <li>✅ Confidence scoring and ΔE LAB distance</li>
+          <li>✅ Finish & type heuristics (e.g., Layer → Base)</li>
+          <li>✅ AI suggestions and mix ideas (optional)</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section" id="features">
-      <div class="container">
-        <h2 class="section-title eczar reveal">What you can do</h2>
-        <p class="section-subtitle reveal" style="--d:60ms">Accurate matches, clean organisation, tasteful UI.</p>
-
-        <div class="features-grid">
-          <article class="card reveal">
-            <h3>Paint Converter</h3>
-            <p>Closest matches across brands using perceptual distance (ΔE-LAB) with brand/finish filters and confidence %.</p>
-          </article>
-          <article class="card reveal" style="--d:60ms">
-            <h3>My Paints</h3>
-            <p>Track owned & wishlist paints, set low-stock flags, and keep your library tidy—works offline.</p>
-          </article>
-          <article class="card reveal" style="--d:120ms">
-            <h3>Palettes</h3>
-            <p>Create paint recipes and inspiration palettes. Share sets and reuse steps across projects.</p>
-          </article>
-          <article class="card reveal" style="--d:180ms">
-            <h3>AI Tools</h3>
-            <p>Smarter substitutions and palette hints. Free tier includes demo credits; Premium lifts limits.</p>
-          </article>
-        </div>
+    </div>
+    <hr class="sep" />
+    <div class="container grid grid-2" style="align-items:center;">
+      <div>
+        <h2 class="h2">My Paints</h2>
+        <p class="p-lg">Track owned and wishlist paints. Filter by brand, color family, type, or finish — everything stays fast and tidy.</p>
+        <ul class="list">
+          <li>✅ Quick add / remove with clear status</li>
+          <li>✅ Filter chips that match the app UI</li>
+          <li>✅ Local-first with optional cloud sync</li>
+        </ul>
       </div>
-    </section>
+      <div class="phone-frame"><img loading="lazy" decoding="async" class="phone" src="assets/images/my-paints.png" alt="My Paints screen" /></div>
+    </div>
+    <hr class="sep" />
+    <div class="container grid grid-2" style="align-items:center;">
+      <div class="phone-frame"><img loading="lazy" decoding="async" class="phone" src="assets/images/ai-recipe.png" alt="AI recipe result" /></div>
+      <div>
+        <h2 class="h2">AI Recipes & Palettes</h2>
+        <p class="p-lg">Generate step‑by‑step recipes and color‑theory palettes, then map them to real paints you own.</p>
+        <ul class="list">
+          <li>✅ Guided (no free‑text prompts) to keep results on‑brand</li>
+          <li>✅ “Closest paint matches” across brands</li>
+          <li>✅ Save, export, and share</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Converter Showcase -->
-    <section class="section alt" id="converter">
-      <div class="container split">
-        <div class="copy">
-          <h2 class="eczar reveal">Accurate cross-brand matches</h2>
-          <p class="reveal" style="--d:60ms">
-            Use ΔE in LAB space for perceptual accuracy. Sort by confidence, limit to paints you own, and tap to compare.
-          </p>
-          <ul class="bullets reveal" style="--d:120ms">
-            <li>ΔE-LAB distance + confidence %</li>
-            <li>Brand & finish filters</li>
-            <li>Mix suggestions for tricky hues</li>
-            <li>Fast, offline-friendly core</li>
+  <section id="how" class="section">
+    <div class="container grid grid-2" style="align-items:center;">
+      <div>
+        <h2 class="h2">How it works</h2>
+        <ol class="list" style="counter-reset: step; margin-top: 8px;">
+          <li><span class="check">①</span> Pick a source paint — we parse its color and metadata.</li>
+          <li><span class="check">②</span> We search across brands using ΔE + heuristics (type, finish, hue bins).</li>
+          <li><span class="check">③</span> You get matches with clear differences (lightness, chroma, hue).</li>
+          <li><span class="check">④</span> Save to <strong>My Paints</strong>, or build a palette/recipe.</li>
+        </ol>
+        <p class="small" style="margin-top:10px;">Tip: Press <kbd>Share</kbd> in a recipe to export a clean image for your group.</p>
+      </div>
+      <div class="phone-frame"><img loading="lazy" decoding="async" class="phone" src="assets/images/match-analysis.png" alt="Analysis screen" /></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="h2">Screenshots</h2>
+      <p class="p-lg">A quick tour of key screens.</p>
+      <div class="gallery" style="margin-top:16px;">
+        <img loading="lazy" decoding="async" src="assets/images/paint-detail.png" alt="Paint detail" />
+        <img loading="lazy" decoding="async" src="assets/images/palettes.png" alt="Palettes list" />
+        <img loading="lazy" decoding="async" src="assets/images/harmony-matches.png" alt="Harmony matches" />
+      </div>
+    </div>
+  </section>
+<section id="pricing" class="section">
+    <div class="container">
+      <h2 class="h2">Pricing</h2>
+      <p class="p-lg">Everything works in the free version. Premium mainly supports development and removes limits/ads.</p>
+      <div class="pricing" style="margin-top:16px;">
+        <div class="card">
+          <div class="kicker">Free</div>
+          <h3 class="h2" style="font-size:28px; margin:8px 0 4px;">Starter</h3>
+          <ul class="list">
+            <li>• Full converter</li>
+            <li>• My Paints up to 50</li>
+            <li>• 5 saved palettes/recipes</li>
+            <li>• Harmony tools</li>
           </ul>
-          <a class="btn btn-primary reveal" style="--d:180ms" href="#download">Try it</a>
         </div>
-        <div class="visual reveal" style="--d:120ms">
-          <div class="mock chart">
-            <div class="bar" style="--v:91%"></div>
-            <div class="bar" style="--v:84%"></div>
-            <div class="bar" style="--v:83%"></div>
-            <div class="bar" style="--v:81%"></div>
-            <div class="bar" style="--v:78%"></div>
-          </div>
+        <div class="card" style="border-color:#2b3340;">
+          <div class="kicker">Premium</div>
+          <h3 class="h2" style="font-size:28px; margin:8px 0 4px;">Everything</h3>
+<p class="p-lg" style="margin:6px 0;"><strong>$3.99/mo</strong> or <strong>$29.99</strong> lifetime</p><ul class="list">
+            <li>• Removes limits & ads</li>
+            <li>• Advanced matching algorithms</li>
+            <li>• AI recipes & palette suggestions</li>
+            <li>• Priority updates & support</li>
+          </ul>
+          <div style="margin-top:16px;"><a class="btn primary" href="#download">Go Premium</a></div>
+          <p class="small" style="margin-top:8px;">In‑app purchase • Cancel anytime</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Screenshots carousel -->
-    <section class="section" aria-label="App screenshots">
-      <div class="container">
-        <div class="shots">
-          <figure><img src="assets/img/screenshots/converter.png" alt="Converter screen"></figure>
-          <figure><img src="assets/img/screenshots/palettes.png" alt="Palettes screen"></figure>
-          <figure><img src="assets/img/screenshots/profile.png" alt="Profile screen"></figure>
-          <figure><img src="assets/img/screenshots/matches.png" alt="Matches screen"></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Palettes -->
-    <section class="section" id="palettes">
-      <div class="container split">
-        <div class="visual reveal">
-          <div class="palette-wheel">
-            <div class="ring r1"></div>
-            <div class="ring r2"></div>
-            <div class="ring r3"></div>
-            <div class="center-dot"></div>
-          </div>
-        </div>
-        <div class="copy">
-          <h2 class="eczar reveal">Palette tools you’ll love</h2>
-          <p class="reveal" style="--d:60ms">
-            Generate complementary, triadic, or tetradic schemes — then fill with real paints you own.
-          </p>
-          <div class="tag-list reveal" style="--d:120ms">
-            <span class="tag">Color Harmony</span>
-            <span class="tag">Paint Recipes</span>
-            <span class="tag">Share & Export</span>
-          </div>
-          <a class="btn btn-ghost reveal" style="--d:160ms" href="#features">See all features</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="section alt" id="pricing">
-      <div class="container">
-        <h2 class="section-title eczar reveal">Simple pricing</h2>
-        <p class="section-subtitle reveal" style="--d:60ms">Start free. Upgrade when you need more power.</p>
-        <div class="pricing">
-          <div class="price-card reveal">
-            <h3>Free</h3>
-            <p class="price">$0</p>
-            <ul class="bullets">
-              <li>Converter & basic palettes</li>
-              <li>Limited inventory</li>
-              <li>AI demo credits</li>
-            </ul>
-            <a class="btn btn-ghost" href="#download">Get Started</a>
-          </div>
-          <div class="price-card featured reveal" style="--d:80ms">
-            <div class="badge">Recommended</div>
-            <h3>Premium</h3>
-            <p class="price">$X.99 / mo</p>
-            <ul class="bullets">
-              <li>Unlimited inventory & palettes</li>
-              <li>Advanced color matching & mixes</li>
-              <li>150 AI credits / month</li>
-              <li>Vision (10 images / month)</li>
-            </ul>
-            <a class="btn btn-primary" href="#download">Go Premium</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Maker -->
-    <section class="section" id="maker">
-      <div class="container">
-        <div class="maker-card reveal">
-          <div class="maker-head">
-            <div class="avatar" aria-hidden="true"></div>
-            <h2 class="eczar">From the maker</h2>
-          </div>
-          <p>
-            Hey! I’m <strong>Bas</strong>, a UX/UI designer from Belgium. I’ve been building <strong>BrushForge</strong> nights &amp; weekends to make converting and organising paints easier.
-            If something feels off or you’ve got an idea, I’d love to hear it.
-          </p>
-          <p class="dim">
-            Sorry for Premium and the ads — they help keep the servers running… and fund my questionable paint addiction.
-          </p>
-          <div class="maker-ctas">
-            <a class="btn btn-blue" href="mailto:support@brushforge.app">Send Feedback</a>
-            <a class="btn btn-ghost" href="#download">Share BrushForge</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bottom Tab preview (mirrors app) -->
-    <section class="section" aria-label="Bottom tab preview">
-      <div class="container">
-        <div class="tab-preview">
-          <button class="tab on" type="button">Converter</button>
-          <button class="tab" type="button">My Paints</button>
-          <button class="tab" type="button">Palettes</button>
-          <button class="tab" type="button">Profile</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download -->
-    <section class="section" id="download">
-      <div class="container">
-        <div class="download-card reveal">
-          <div class="left">
-            <h2 class="eczar">Download BrushForge</h2>
-            <p>iPhone &amp; iPad • iOS 17+</p>
-            <div class="badges">
-              <a class="store-badge" href="#"><div class="badge-placeholder">App Store</div></a>
-              <a class="store-badge" href="#"><div class="badge-placeholder alt">TestFlight</div></a>
-            </div>
-          </div>
-          <div class="right">
-            <div class="qr placeholder" aria-hidden="true">QR</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section alt" id="faq">
-      <div class="container">
-        <h2 class="section-title eczar reveal">FAQ</h2>
-        <div class="faq">
-          <details class="reveal">
-            <summary>Which paint brands are supported?</summary>
-            <p>Citadel, Vallejo, Army Painter, AK, AK Real Colors, Duncan Rhodes, Green Stuff World, Kimera Kolors, and Privateer Press (P3).</p>
-          </details>
-          <details class="reveal" style="--d:60ms">
-            <summary>Do AI features require internet?</summary>
-            <p>Core features work offline; AI calls require connectivity and use a small credit system.</p>
-          </details>
-          <details class="reveal" style="--d:120ms">
-            <summary>How accurate are matches?</summary>
-            <p>Matches use LAB ΔE distance and show confidence %. Filter by brand, finish, or owned paints.</p>
-          </details>
-          <details class="reveal" style="--d:180ms">
-            <summary>Is BrushForge affiliated with Games Workshop?</summary>
-            <p>No — BrushForge is an independent tool for hobbyists and is not affiliated with Games Workshop.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="brand-col">
-        <a href="/" class="brand">
-          <span class="logo-orb"></span>
-          <span class="brand-text eczar">BrushForge</span>
-        </a>
-        <p class="small">© <span id="year"></span> BrushForge. All rights reserved.</p>
-        <p class="tiny">Warhammer and all associated names are trademarks of Games Workshop. BrushForge is not affiliated with or endorsed by Games Workshop.</p>
-      </div>
-      <div class="links">
-        <h4>Links</h4>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#download">Download</a>
-      </div>
-      <div class="legal">
-        <h4>Legal</h4>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="mailto:support@brushforge.app">Support</a>
-      </div>
-      <div class="newsletter">
-        <h4>Get updates</h4>
-        <form class="inline-form" action="#" method="post" onsubmit="event.preventDefault(); subscribe(event);">
-          <input type="email" name="email" placeholder="Your email" required />
-          <button class="btn btn-primary" type="submit">Notify me</button>
-        </form>
-        <p class="tiny">We’ll only email you about BrushForge. No spam.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/js/script.js" defer></script>
-</body>
-</html>
+  <section class="section" style="padding-bottom:100px;">
+    <div class="container" style="text-align:center;">
+      <h2 class="h2">Ready to paint smarter?</h2>
+      <p class="p-lg">Join the TestFlight and help shape the release.</p>
+      <div style="margin-top:12px;">
+        <a class="btn primary" href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow">Download TestFlight Build</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="h2">FAQ</h2>
+      <div class="faq">
+        <div class="item open">
+          <div class="q"><h4>Is the converter accurate?</h4><div class="toggle">+</div></div>
+          <div class="a">
+            Matches are calculated with ΔE color distance and extra rules for type/finish. You can also rate matches so they improve over time.
+          </div>
+        </div>
+        <div class="item">
+          <div class="q"><h4>What do I get for free?</h4><div class="toggle">+</div></div>
+          <div class="a">
+            Full converter, 50 owned paints, and up to 5 saved palettes/recipes.
+          </div>
+        </div>
+        <div class="item">
+          <div class="q"><h4>What does Premium unlock?</h4><div class="toggle">+</div></div>
+          <div class="a">
+            Removes limits & ads, advanced matching algorithms, and AI helpers for recipes and palettes.
+          </div>
+        </div>
+        <div class="item">
+          <div class="q"><h4>Will this work offline?</h4><div class="toggle">+</div></div>
+          <div class="a">
+            Your paints and palettes are stored locally; converters may require connectivity for the latest data.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="maker" class="section" style="background:linear-gradient(180deg,#0c1016,#0a0e13);">
+    <div class="container">
+      <div class="card" style="display:flex; align-items:center; gap:22px; padding:24px;">
+        <div style="flex:1;">
+          <h2 class="h2" style="margin:0 0 8px;">From the maker</h2>
+          <p class="p-lg">Hey! I’m <strong>Bas</strong>, a UX/UI designer from Belgium. I’ve been building <strong>BrushForge</strong> nights &amp; weekends to make converting and organising paints easier. If something feels off or you’ve got an idea, I’d love to hear it.</p>
+          <p class="p">Sorry for Premium and the ads — they help keep the servers running… and fund my questionable paint addiction.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+            <a class="btn primary" href="mailto:brushforgeapp@gmail.com?subject=BrushForge%20feedback">Send Feedback</a>
+            <a class="btn ghost" href="#" data-share>Share BrushForge</a>
+          </div>
+</div>
+        <img loading="lazy" decoding="async" src="assets/images/palettes.png" alt="BrushForge app preview" style="width:280px; border-radius:16px; border:1px solid var(--border); display:none;" class="hide-mobile">
+      </div>
+    </div>
+  </section>
+<footer class="footer">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+<a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
