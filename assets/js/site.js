@@ -11,17 +11,16 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
-
-// FAQ accordion
+// FAQ accordion (single handler with ARIA)
 document.addEventListener('click', (e) => {
   const q = e.target.closest('.faq .q');
   if (!q) return;
   const item = q.closest('.item');
-  item.classList.toggle('open');
+  const open = !item.classList.contains('open');
+  document.querySelectorAll('.faq .item').forEach(i => i.classList.remove('open'));
+  item.classList.toggle('open', open);
+  q.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
-
-
 
 // Share button
 document.addEventListener('click', async (e) => {
@@ -30,7 +29,7 @@ document.addEventListener('click', async (e) => {
   e.preventDefault();
   const shareData = {
     title: 'BrushForge — Paint converter & toolkit',
-    text: 'I'm testing this app for miniature painters. Join the TestFlight beta:',
+    text: 'I\'m testing this app for miniature painters. Join the TestFlight beta:',
     url: 'https://testflight.apple.com/join/2jnGZJss'
   };
   try {
@@ -42,4 +41,14 @@ document.addEventListener('click', async (e) => {
       setTimeout(() => (btn.textContent = 'Share BrushForge'), 1500);
     }
   } catch {}
+});
+
+// Resilient mailto (fallback)
+document.addEventListener('click', (e) => {
+  const m = e.target.closest('[data-mailto]');
+  if (!m) return;
+  const href = m.getAttribute('href');
+  if (href && href.startsWith('mailto:')) {
+    setTimeout(() => { window.location.href = href; }, 0);
+  }
 });
