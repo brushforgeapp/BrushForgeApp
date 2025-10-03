@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta name="theme-color" content="#0b0d10">
+  <meta name="theme-color" content="#0b0d10" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
-<title>BrushForge — Clean & Accurate Paint Converter for Miniature Painters</title>
-  <meta name="description" content="Switch paint brands with confidence. Build palettes and step‑by‑step recipes that map to the paints you actually own." />
+  <title>BrushForge — Clean & Accurate Paint Converter for Miniature Painters</title>
+  <meta name="description" content="Switch paint brands with confidence. Build palettes and step-by-step recipes that map to the paints you actually own." />
   <link rel="canonical" href="https://brushforge.app/" />
   <meta property="og:title" content="BrushForge — Clean & Accurate Paint Converter for Miniature Painters" />
-  <meta property="og:description" content="Switch paint brands with confidence. Build palettes and step‑by‑step recipes that map to the paints you actually own." />
+  <meta property="og:description" content="Switch paint brands with confidence. Build palettes and step-by-step recipes that map to the paints you actually own." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/match-overview.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/site.css" />
-  <script defer src="assets/js/site.js"></script>
   <link rel="manifest" href="site.webmanifest">
+  <script defer src="assets/js/site.js"></script>
 </head>
 
 <body>
-
 <header class="header">
   <div class="container nav">
     <a href="/" class="brand">
@@ -35,7 +35,7 @@
       <a href="#how">How it works</a>
       <a href="#gallery">Screenshots</a>
       <a href="#pricing">Pricing</a>
-      <a href="#download" class="btn primary">Get the App</a>
+      <a href="#get-app" class="btn primary">Get the App</a>
     </nav>
   </div>
 </header>
@@ -46,9 +46,9 @@
       <div>
         <span class="badge"><span class="dot"></span> iOS • SwiftUI</span>
         <h1 class="h1" style="margin:16px 0 12px;">Convert paints. Craft palettes. Save time.</h1>
-        <p class="p-lg">BrushForge helps miniature painters jump between brands, manage collections, and generate color‑true palettes and recipes — fast, clear, and private by default.</p>
+        <p class="p-lg">BrushForge helps miniature painters jump between brands, manage collections, and generate color-true palettes and recipes — fast, clear, and private by default.</p>
         <div style="display:flex; gap:12px; margin-top:22px;">
-          <a href="https://brushforgeapp.com/download">Download BrushForge</a>
+          <a class="btn primary" href="https://brushforgeapp.com/download">Download BrushForge</a>
           <a class="btn" href="#features">See features</a>
         </div>
         <div class="pills">
@@ -56,7 +56,7 @@
           <span class="pill">My Paints</span>
           <span class="pill">Palettes</span>
           <span class="pill">AI Recipes</span>
-</div>
+        </div>
       </div>
       <div class="phone-frame">
         <img loading="lazy" decoding="async" class="phone" src="assets/images/match-overview.png" alt="Match details screen" />
@@ -64,32 +64,31 @@
     </div>
   </section>
 
-  
   <section id="get-app" class="section">
-    <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+    <div class="container grid grid-2">
       <div>
         <h2 class="h2">Get the app</h2>
         <p class="p-lg">Download BrushForge on iOS. Point your camera at the QR or tap the button.</p>
-        <div style="display:flex; gap:12px; align-items:center; margin-top:10px;">
+        <div style="display:flex; gap:12px; align-items:center; margin-top:10px; flex-wrap:wrap;">
           <a class="btn primary" href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow">Download BrushForge</a>
           <a class="btn ghost" href="#pricing">See pricing</a>
         </div>
       </div>
-      <a href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow" style="display:grid; place-items:center; background:#0e131b; border:1px solid var(--border); border-radius:18px; min-height:220px; text-decoration:none;">
-        <div style="text-align:center;">
-          <div style="width:180px; height:180px; background:repeating-conic-gradient(#0b0d10 0 10deg,#1a2230 10deg 20deg); border-radius:8px; margin:0 auto 10px; border:1px solid #2a3340;"></div>
-          <div class="small">Dummy QR • Opens AppleStore</div>
+      <a href="https://testflight.apple.com/join/2jnGZJss" rel="nofollow" class="qr-card">
+        <div class="qr-wrap">
+          <div class="qr" aria-hidden="true"></div>
+          <div class="small">Dummy QR • Opens App Store</div>
         </div>
       </a>
     </div>
   </section>
 
-<section id="features" class="section">
+  <section id="features" class="section">
     <div class="container grid grid-2" style="align-items:center;">
       <div class="phone-frame"><img loading="lazy" decoding="async" class="phone" src="assets/images/matches-list.png" alt="Paint matches list" /></div>
       <div>
         <h2 class="h2">Paint Converter</h2>
-        <p class="p-lg">Accurate brand‑to‑brand matches with confidence scores and ΔE values. Understand where hue, lightness, and chroma differ — so you can compensate on the model.</p>
+        <p class="p-lg">Accurate brand-to-brand matches with confidence scores and ΔE values. Understand where hue, lightness, and chroma differ — so you can compensate on the model.</p>
         <ul class="list">
           <li>✅ Confidence scoring and ΔE LAB distance</li>
           <li>✅ Finish & type heuristics (e.g., Layer → Base)</li>
@@ -115,9 +114,9 @@
       <div class="phone-frame"><img loading="lazy" decoding="async" class="phone" src="assets/images/ai-recipe.png" alt="AI recipe result" /></div>
       <div>
         <h2 class="h2">AI Recipes & Palettes</h2>
-        <p class="p-lg">Generate step‑by‑step recipes and color‑theory palettes, then map them to real paints you own.</p>
+        <p class="p-lg">Generate step-by-step recipes and color-theory palettes, then map them to real paints you own.</p>
         <ul class="list">
-          <li>✅ Guided (no free‑text prompts) to keep results on‑brand</li>
+          <li>✅ Guided (no free-text prompts) to keep results on-brand</li>
           <li>✅ “Closest paint matches” across brands</li>
           <li>✅ Save, export, and share</li>
         </ul>
@@ -152,7 +151,8 @@
       </div>
     </div>
   </section>
-<section id="pricing" class="section">
+
+  <section id="pricing" class="section">
     <div class="container">
       <h2 class="h2">Pricing</h2>
       <p class="p-lg">Everything works in the free version. Premium mainly supports development and removes limits/ads.</p>
@@ -170,15 +170,15 @@
         <div class="card" style="border-color:#2b3340;">
           <div class="kicker">Premium</div>
           <h3 class="h2" style="font-size:28px; margin:8px 0 4px;">Everything</h3>
-<p class="p-lg" style="margin:6px 0;"><strong>$2.99/mo</strong> or <strong>$14.99</strong> lifetime</p>
+          <p class="p-lg" style="margin:6px 0;"><strong>$2.99/mo</strong> or <strong>$14.99</strong> lifetime</p>
           <ul class="list">
             <li>• Removes limits & ads</li>
             <li>• Advanced matching algorithms</li>
             <li>• AI recipes & palette suggestions</li>
             <li>• Priority updates & support</li>
           </ul>
-          <div style="margin-top:16px;"><a class="btn primary" href="#download">Go Premium</a></div>
-          <p class="small" style="margin-top:8px;">In‑app purchase • Cancel anytime</p>
+          <div style="margin-top:16px;"><a class="btn primary" href="#get-app">Go Premium</a></div>
+          <p class="small" style="margin-top:8px;">In-app purchase • Cancel anytime</p>
         </div>
       </div>
     </div>
@@ -195,53 +195,53 @@
   </section>
 </main>
 
-
-  <section id="faq" class="section">
-    <div class="container">
-      <h2 class="h2">FAQ</h2>
-      <div class="faq">
-        <div class="item open">
-          <div class="q" aria-expanded="true"><h4>Is the converter accurate?</h4><div class="toggle">+</div></div>
-          <div class="a">
-            Matches use ΔE (color distance) plus rules for type/finish. You can thumbs‑up/down matches to improve them over time.
-          </div>
+<section id="faq" class="section">
+  <div class="container">
+    <h2 class="h2">FAQ</h2>
+    <div class="faq">
+      <div class="item open">
+        <div class="q" aria-expanded="true"><h4>Is the converter accurate?</h4><div class="toggle">+</div></div>
+        <div class="a">
+          Matches use ΔE (color distance) plus rules for type/finish. You can thumbs-up/down matches to improve them over time.
         </div>
-        <div class="item">
-          <div class="q" aria-expanded="false"><h4>What do I get for free?</h4><div class="toggle">+</div></div>
-          <div class="a">
-            Full converter, 50 owned paints, and up to 5 saved palettes/recipes.
-          </div>
+      </div>
+      <div class="item">
+        <div class="q" aria-expanded="false"><h4>What do I get for free?</h4><div class="toggle">+</div></div>
+        <div class="a">
+          Full converter, 50 owned paints, and up to 5 saved palettes/recipes.
         </div>
-        <div class="item">
-          <div class="q" aria-expanded="false"><h4>What does Premium unlock?</h4><div class="toggle">+</div></div>
-          <div class="a">
-            Removes limits/ads and unlocks AI helpers for recipes and palettes.
-          </div>
+      </div>
+      <div class="item">
+        <div class="q" aria-expanded="false"><h4>What does Premium unlock?</h4><div class="toggle">+</div></div>
+        <div class="a">
+          Removes limits/ads and unlocks AI helpers for recipes and palettes.
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="maker" class="section" style="background:linear-gradient(180deg,#0c1016,#0a0e13);">
-    <div class="container">
-      <div class="card" style="display:flex; align-items:center; gap:22px; padding:24px;">
-        <div style="flex:1;">
-          <h2 class="h2" style="margin:0 0 8px;">From the maker</h2>
-          <p class="p-lg">Hey! I’m <strong>Bas</strong>, a UX/UI designer from Belgium. I’ve been building <strong>BrushForge</strong> nights &amp; weekends to make converting and organising paints easier. If something feels off or you’ve got an idea, I’d love to hear it.</p>
-          <p class="p">Sorry for Premium and the ads — they help keep the servers running… and fund my questionable paint addiction.</p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
-            <a class="btn primary" href="mailto:brushforgeapp@gmail.com?subject=BrushForge%20feedback" data-mailto>Send Feedback</a>
-            <a class="btn ghost" href="#" data-share>Share BrushForge</a>
-          </div>
+<section id="maker" class="section" style="background:linear-gradient(180deg,#0c1016,#0a0e13);">
+  <div class="container">
+    <div class="card maker-card">
+      <div class="maker-copy">
+        <h2 class="h2" style="margin:0 0 8px;">From the maker</h2>
+        <p class="p-lg">Hey! I’m <strong>Bas</strong>, a UX/UI designer from Belgium. I’ve been building <strong>BrushForge</strong> nights &amp; weekends to make converting and organising paints easier. If something feels off or you’ve got an idea, I’d love to hear it.</p>
+        <p class="p">Sorry for Premium and the ads — they help keep the servers running… and fund my questionable paint addiction.</p>
+        <div class="maker-actions">
+          <a class="btn primary" href="mailto:brushforgeapp@gmail.com?subject=BrushForge%20feedback" data-mailto>Send Feedback</a>
+          <a class="btn ghost" href="#" data-share>Share BrushForge</a>
         </div>
-        <img loading="lazy" decoding="async" src="assets/images/palettes.png" alt="BrushForge app preview" class="hide-mobile" style="width:280px; border-radius:16px; border:1px solid var(--border);" />
       </div>
+      <img loading="lazy" decoding="async" src="assets/images/palettes.png" alt="BrushForge app preview" class="maker-img hide-mobile" />
     </div>
-  </section>
+  </div>
+</section>
+
 <footer class="footer">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+  <div class="container footer-inner">
     <span>© 2025 BrushForge</span>
-    <div style="display:flex; gap:16px;">
+    <div class="footer-links">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
       <a href="legal.html">Legal</a>
@@ -251,3 +251,5 @@
     </div>
   </div>
 </footer>
+</body>
+</html>
