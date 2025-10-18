@@ -1,1 +1,7 @@
+# Authorized digital sellers for all apps by BrushForge Studio
+# BrushForge (iOS & Android)
+google.com, pub-7570956149985965, DIRECT, f08c47fec0942fa0
+
+
+# Race to 100: Math Puzzle! (iOS)
 google.com, pub-7570956149985965, DIRECT, f08c47fec0942fa0
