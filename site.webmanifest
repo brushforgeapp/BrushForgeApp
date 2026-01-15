@@ -7,9 +7,9 @@
   "theme_color": "#0b0d10",
   "icons": [
     {
-      "src": "assets/images/matches-list.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
+      "src": "assets/images/logo.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg"
     }
   ]
 }
