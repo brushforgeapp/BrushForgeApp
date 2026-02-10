@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d10" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+    <title>About BrushForge — The Story</title>
+    <meta name="description"
+        content="The story behind BrushForge, a hobby project built by a miniature painter for miniature painters." />
+    <link rel="icon" href="assets/images/logo.jpg" sizes="any">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="canonical" href="https://brushforge.app/about.html" />
+    <script>window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script defer src="assets/js/site.js"></script>
+    <style>
+        /* Specific styles for the about page article layout */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .article-header {
+            padding: 100px 0 40px;
+            text-align: center;
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            /* Slightly lighter text for readability */
+        }
+
+        .article-content h2 {
+            margin-top: 60px;
+            margin-bottom: 24px;
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 2rem;
+        }
+
+        .article-content h3 {
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+        }
+
+        .portrait-placeholder {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            /* Aspect ratio placeholder */
+            background: var(--surface);
+            border: 1px dashed var(--accent);
+            border-radius: var(--radius-xl);
+            margin: 0 auto 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Quote style */
+        blockquote {
+            border-left: 4px solid var(--accent);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 24px 32px;
+            margin: 40px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="/" class="brand">
+                <img src="assets/images/logo.jpg" class="logo" alt="BrushForge Logo" />
+                <span>BrushForge</span>
+            </a>
+            <nav class="navlinks">
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="about.html" class="active" style="color:#fff;">About</a>
+                <a href="/#get-app" class="btn primary">Get the App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-header article-container">
+            <span class="badge"><span class="dot"></span> The Story</span>
+            <h1 class="h1">Building BrushForge – 1.5 Years Later</h1>
+        </div>
+
+        <div class="article-container">
+            <!-- Portrait Image -->
+            <img src="assets/images/Myself.jpg" alt="Portrait of the creator" class="portrait-placeholder"
+                style="object-fit:cover; border:none; padding:0;">
+
+            <div class="article-content">
+                <p>When I started BrushForge, I honestly just wanted to build a small tool for myself.</p>
+                <p>I’m a UX/UI designer by day, with a programming background, and I missed actually building things.
+                    Not just designing apps for others, but shipping something of my own again.</p>
+                <p>BrushForge became my excuse to properly get back into coding.</p>
+                <p>I didn’t expect it to turn into a 1.5-year project across two platforms, with real users, a growing
+                    community, and way more work than I ever planned 😅<br>
+                    But here we are.</p>
+
+                <h2>A bit of personal context</h2>
+                <p>I also picked up miniature painting again after almost 20 years.</p>
+                <p>A while back I was dealing with pretty bad insomnia, and painting minis during those sleepless nights
+                    helped me more than I expected. Quiet hobby, no pressure, just focusing on tiny details while the
+                    rest of the world was asleep.</p>
+                <p>That’s also where the name MidnightMiniatures comes from.</p>
+
+                <!-- Miniature Work Image -->
+                <figure style="margin: 40px -20px;">
+                    <img src="assets/images/Mywork.jpg" alt="Miniature painted by the creator"
+                        style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+                    <figcaption style="text-align:center; color:var(--muted); font-size:0.9rem; margin-top:12px;">One of
+                        my
+                        recent projects.</figcaption>
+                </figure>
+
+                <p>BrushForge grew out of that same period. I kept running into small annoyances while painting and
+                    thought:</p>
+                <blockquote>
+                    <p>“Why isn’t there one place that just has all of this?”</p>
+                </blockquote>
+                <p>So I started building it.</p>
+
+                <h2>Starting with iOS (and learning the hard way)</h2>
+                <p>BrushForge began on iOS.</p>
+                <p>It was my first proper mobile project in a while, and I relearned a lot the hard way: architecture
+                    mistakes, performance issues, weird edge cases, and of course users doing things you never expect.
+                </p>
+                <p>After some time, I decided to also build an Android version.</p>
+                <p>Ironically, Android ended up becoming the more complete app. Not because it’s better by default, but
+                    because I could apply everything I learned from iOS and just build it smarter the second time.</p>
+                <p>Right now Android has more features and a more active community. Once that version feels stable
+                    enough, I’ll bring those improvements back to iOS.</p>
+
+                <h2>Not vibecoded, but AI definitely helped</h2>
+                <p>When I started this project, “vibecoding” wasn’t even a thing yet.</p>
+                <p>BrushForge isn’t AI-generated or auto-built. It’s very much hand-made, feature by feature.</p>
+                <p>That said, AI tools helped a lot along the way. Especially with backend questions (I’m mostly
+                    frontend), tricky problems, and exploring different approaches when I got stuck.</p>
+                <p>For me it worked more like a learning partner than a shortcut.</p>
+                <p>And I was lucky to have a few friends helping out too.</p>
+
+                <h2>The hardest parts weren’t coding</h2>
+                <p>Building the app itself wasn’t the hardest part. Two things were much tougher.</p>
+
+                <h3>1. The paint database</h3>
+                <p>There’s no open-source paint database. No clean API. No easy solution.</p>
+                <p>So everything has to be done manually: collecting paints, cleaning data, verifying colors, fixing
+                    duplicates, and keeping it all up to date.</p>
+                <p>Some brands were kind enough to share official data (which helps a lot). Others never replied.</p>
+                <p>It’s slow work, but it’s gradually improving.</p>
+
+                <h3>2. Finding users (without being annoying)</h3>
+                <p>This one is harder than writing code.</p>
+                <p>I share the app on Reddit occasionally, but I really try not to spam or push it too hard. Growth is
+                    slow and organic.</p>
+                <p>Still, the feedback I’ve received so far has been very positive, and that honestly keeps me motivated
+                    to continue.</p>
+
+                <h2>Life + work + BrushForge</h2>
+                <p>BrushForge is still a side project.</p>
+                <p>So it’s:<br>
+                    a full-time job<br>
+                    life stuff<br>
+                    and the app</p>
+
+                <!-- Workplace Image -->
+                <figure style="margin: 40px -20px;">
+                    <img src="assets/images/Portrait.jpg" alt="The developer's miniature painting workspace"
+                        style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+                    <figcaption style="text-align:center; color:var(--muted); font-size:0.9rem; margin-top:12px;">My
+                        painting station, where the "midnight" part of MidnightMiniatures happens.</figcaption>
+                </figure>
+
+                <p>And recently… twins 😅</p>
+                <p>So time is limited.</p>
+                <p>Progress is sometimes slower than I’d like, but that’s okay. This is a long-term project, not a
+                    sprint.</p>
+
+                <h2>About pricing</h2>
+                <p>BrushForge was never meant to make me rich. It’s a hobby project first.</p>
+                <p>But there are real costs:</p>
+                <ul>
+                    <li>servers and backend</li>
+                    <li>store fees</li>
+                    <li>a lot of development hours</li>
+                </ul>
+                <p>And I live in a country with high taxes, so realistically I don’t keep much of what comes in.</p>
+                <p>I fully understand when people feel the pricing or limits are frustrating. I’m trying to find a
+                    balance that keeps the app sustainable while still being fair.</p>
+                <p>That balance is still evolving.</p>
+
+                <h2>What’s next?</h2>
+                <p>The goal hasn’t changed.</p>
+                <p>I want BrushForge to slowly become a solid toolkit for miniature painters. One place with useful
+                    tools, without getting in the way of the hobby itself.</p>
+                <p>Right now I’m focusing on:</p>
+                <ul>
+                    <li>bringing Android and iOS closer together feature-wise</li>
+                    <li>improving iOS again</li>
+                    <li>expanding and cleaning up the paint database</li>
+                    <li>working with more brands</li>
+                    <li>shipping features based on user feedback</li>
+                </ul>
+                <p>A lot of what exists today came directly from the community, and that’s how I want to keep building
+                    it.</p>
+
+                <h2>Why I keep doing this</h2>
+                <p>At the end of the day, I keep working on BrushForge because I enjoy it.</p>
+                <p>It helped me reconnect with programming, build something useful, and combine it with a hobby that
+                    genuinely helped me during a rough period.</p>
+                <p>It’s still very much a work in progress.</p>
+                <p>But it’s a fun one.</p>
+            </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <section id="get-app" class="section cta-final reveal">
+            <div class="container" style="text-align:center;">
+                <h2 class="h2">Follow the Journey</h2>
+                <p class="p-lg">Join the community on Discord to see what's coming next.</p>
+                <div style="margin-top:24px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://discord.gg/U9yD96BhA4" class="btn primary"
+                        style="background:#5865F2; border-color:#5865F2; color:#fff;">Join Discord</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="brand">
+                <img src="assets/images/logo.jpg" class="logo" alt="BrushForge Logo" />
+                <span>BrushForge</span>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="legal.html">Legal</a>
+                <a href="support.html">Support</a>
+                <a href="https://discord.gg/U9yD96BhA4">Discord</a>
+            </div>
+            <div class="small">© 2025 BrushForge. All rights reserved.</div>
+            <div class="small" style="font-size:0.75rem; opacity:0.6; margin-top:16px; width:100%;">
+                BrushForge is an unofficial app and is not affiliated with, endorsed, or sponsored by Games Workshop
+                Limited.
+                Warhammer, Warhammer 40,000, Age of Sigmar, and other trademarks are the property of their respective
+                owners.
+                <br>
+                Copyrights are Trans Atlantis Games 2026 and used with permission.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
