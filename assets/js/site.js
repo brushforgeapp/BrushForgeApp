@@ -54,3 +54,42 @@ document.addEventListener('click', (e) => {
   // Defer to allow default processing
   setTimeout(() => { window.location.href = href; }, 0);
 });
+
+// Reveal on Scroll
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Dynamic Behaviors (Cookie Banner & 3D Cards)
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const btn = document.getElementById('accept-cookies');
+  
+  if (banner && btn && !localStorage.getItem('cookiesAccepted')) {
+    setTimeout(() => banner.classList.add('show'), 1500);
+    
+    btn.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner.classList.remove('show');
+    });
+  }
+  
+  // Initialize Vanilla Tilt on desktop for Cards and Phone Frames
+  if (typeof VanillaTilt !== 'undefined' && window.matchMedia("(min-width: 768px)").matches) {
+    VanillaTilt.init(document.querySelectorAll(".card, .phone-frame"), {
+      max: 5,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.15,
+      scale: 1.02,
+      transition: true
+    });
+  }
+});
+
