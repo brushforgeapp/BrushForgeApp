@@ -269,6 +269,117 @@ img {
 /* Hero */
 .hero {
   padding: 100px 0 80px;
+  overflow: hidden;
+  /* Prevent floating phones from causing horizontal scroll */
+}
+
+/* Hero Showcase 3D Floating Mockups */
+.hero-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.hero-phone {
+  position: absolute;
+  top: 0;
+  border-radius: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 8px #1a1d24;
+  background: #000;
+  display: block;
+}
+
+/* Center Phone */
+.phone-center {
+  width: 60%;
+  left: 20%;
+  z-index: 3;
+  animation: floatCenter 6s ease-in-out infinite;
+}
+
+/* Left Phone */
+.phone-left {
+  width: 50%;
+  left: 0;
+  top: 10%;
+  z-index: 2;
+  transform: rotate(-10deg) scale(0.9) translateX(-10%);
+  filter: brightness(0.6) blur(1px);
+  animation: floatLeft 7s ease-in-out infinite alternate;
+}
+
+/* Right Phone */
+.phone-right {
+  width: 50%;
+  right: 0;
+  top: 5%;
+  z-index: 1;
+  transform: rotate(10deg) scale(0.9) translateX(10%);
+  filter: brightness(0.5) blur(2px);
+  animation: floatRight 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatCenter {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatLeft {
+
+  0%,
+  100% {
+    transform: rotate(-10deg) scale(0.9) translateX(-10%) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-8deg) scale(0.9) translateX(-10%) translateY(-20px);
+  }
+}
+
+@keyframes floatRight {
+
+  0%,
+  100% {
+    transform: rotate(10deg) scale(0.9) translateX(10%) translateY(0);
+  }
+
+  50% {
+    transform: rotate(12deg) scale(0.9) translateX(10%) translateY(-25px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-showcase {
+    margin-top: 60px;
+    max-width: 100%;
+    aspect-ratio: auto;
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .phone-left,
+  .phone-right {
+    display: none;
+    /* Simplify on very small screens for better UX */
+  }
+
+  .phone-center {
+    width: 280px;
+    left: 50%;
+    margin-left: -140px;
+  }
 }
 
 .badge {
