@@ -7,9 +7,9 @@
     <meta name="theme-color" content="#0b0d10" />
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
-    <title>About BrushForge — The Story</title>
+    <title>About BrushForge</title>
     <meta name="description"
-        content="The story behind BrushForge, a hobby project built by a miniature painter for miniature painters." />
+        content="BrushForge is the ultimate companion app for miniature painters, built to make the hobby easier through precision color matching and organization." />
     <link rel="icon" href="assets/images/logo.jpg" sizes="any">
     <link rel="apple-touch-icon" href="assets/images/logo.jpg">
     <link rel="canonical" href="https://brushforge.app/about.html" />
@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="assets/css/site.css" />
     <script defer src="assets/js/site.js"></script>
     <style>
-        /* Specific styles for the about page article layout */
         .article-container {
             max-width: 800px;
             margin: 0 auto;
@@ -41,7 +40,6 @@
             font-size: 1.125rem;
             line-height: 1.8;
             color: #e2e8f0;
-            /* Slightly lighter text for readability */
         }
 
         .article-content h2 {
@@ -63,37 +61,6 @@
         .article-content p {
             margin-bottom: 24px;
         }
-
-        .portrait-placeholder {
-            width: 100%;
-            max-width: 400px;
-            height: 400px;
-            /* Aspect ratio placeholder */
-            background: var(--surface);
-            border: 1px dashed var(--accent);
-            border-radius: var(--radius-xl);
-            margin: 0 auto 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--muted);
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        /* Quote style */
-        blockquote {
-            border-left: 4px solid var(--accent);
-            background: rgba(255, 255, 255, 0.03);
-            padding: 24px 32px;
-            margin: 40px 0;
-            border-radius: 0 var(--radius-md) var(--radius-md) 0;
-            font-style: italic;
-        }
-
-        blockquote p {
-            margin: 0;
-        }
     </style>
 </head>
 
@@ -107,7 +74,8 @@
             <nav class="navlinks">
                 <a href="/#features">Features</a>
                 <a href="/#pricing">Pricing</a>
-                <a href="about.html" class="active" style="color:#fff;">The Story</a>
+                <a href="about.html" class="active" style="color:#fff;">About</a>
+                <a href="the-story.html">The Story</a>
                 <a href="/#get-app" class="btn primary">Get the App</a>
             </nav>
         </div>
@@ -115,148 +83,74 @@
 
     <main>
         <div class="article-header article-container">
-            <span class="badge"><span class="dot"></span> The Story</span>
-            <h1 class="h1">Building BrushForge – 1.5 Years Later</h1>
+            <span class="badge"><span class="dot"></span> About the App</span>
+            <h1 class="h1">What is BrushForge?</h1>
+            <p class="p-lg" style="margin:20px auto 0;">The ultimate companion app for miniature painters, built to make
+                the hobby easier.</p>
         </div>
 
         <div class="article-container">
-            <!-- Portrait Image -->
-            <img src="assets/images/Myself.jpg" alt="Portrait of the creator" class="portrait-placeholder"
-                style="object-fit:cover; border:none; padding:0;">
-
             <div class="article-content">
-                <p>When I started BrushForge, I honestly just wanted to build a small tool for myself.</p>
-                <p>I’m a UX/UI designer by day, with a programming background, and I missed actually building things.
-                    Not just designing apps for others, but shipping something of my own again.</p>
-                <p>BrushForge became my excuse to properly get back into coding.</p>
-                <p>I didn’t expect it to turn into a 1.5-year project across two platforms, with real users, a growing
-                    community, and way more work than I ever planned 😅<br>
-                    But here we are.</p>
+                <h2>The Mission</h2>
+                <p>Miniature painting should be about creativity, not wrestling with paint conversions across brands,
+                    trying to remember what paints you own while at the hobby shop, or losing track of the recipes you
+                    used for an army you started six months ago.</p>
+                <p>BrushForge was built to be the single, reliable tool that handles the logistics so you can focus
+                    entirely on the brush.</p>
 
-                <h2>A bit of personal context</h2>
-                <p>I also picked up miniature painting again after almost 20 years.</p>
-                <p>A while back I was dealing with pretty bad insomnia, and painting minis during those sleepless nights
-                    helped me more than I expected. Quiet hobby, no pressure, just focusing on tiny details while the
-                    rest of the world was asleep.</p>
-                <p>That’s also where the name MidnightMiniatures comes from.</p>
+                <h2>Core Features</h2>
 
-                <!-- Miniature Work Image -->
-                <figure style="margin: 40px -20px;">
-                    <img src="assets/images/Mywork.jpg" alt="Miniature painted by the creator"
-                        style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-                    <figcaption style="text-align:center; color:var(--muted); font-size:0.9rem; margin-top:12px;">One of
-                        my
-                        recent projects.</figcaption>
-                </figure>
+                <div class="grid grid-2" style="margin-top: 40px; gap: 32px;">
+                    <div class="card" style="padding: 32px;">
+                        <h3 style="margin-top:0;">Precision Matching</h3>
+                        <p style="font-size: 1rem; margin-bottom:0;">We utilize rigorous Delta E 2000 LAB color science
+                            to power our 4,300+ paint database. It's not just "looks similar"—it's mathematically
+                            matched across Citadel, Vallejo, Army Painter, Pro Acryl, and more.</p>
+                    </div>
+                    <div class="card" style="padding: 32px;">
+                        <h3 style="margin-top:0;">Complete Organization</h3>
+                        <p style="font-size: 1rem; margin-bottom:0;">Carry your entire inventory in your pocket. Track
+                            what you own, manage a shopping wishlist, log your custom mixes, and build step-by-step
+                            project plans for your miniatures.</p>
+                    </div>
+                    <div class="card" style="padding: 32px;">
+                        <h3 style="margin-top:0;">Creative Tools</h3>
+                        <p style="font-size: 1rem; margin-bottom:0;">Feeling stuck? Use our Recipe Generator to find
+                            ideas based on your existing paints, or analyze photos to pull matching color schemes
+                            directly from reference images.</p>
+                    </div>
+                    <div class="card" style="padding: 32px;">
+                        <h3 style="margin-top:0;">Offline First</h3>
+                        <p style="font-size: 1rem; margin-bottom:0;">Painting often happens in basements, at events, or
+                            in the back of hobby shops with terrible reception. Core features of BrushForge work
+                            completely offline to ensure it never slows your hobby down.</p>
+                    </div>
+                </div>
 
-                <p>BrushForge grew out of that same period. I kept running into small annoyances while painting and
-                    thought:</p>
-                <blockquote>
-                    <p>“Why isn’t there one place that just has all of this?”</p>
-                </blockquote>
-                <p>So I started building it.</p>
+                <h2>Platform & Pricing</h2>
+                <p style="margin-top: 40px;">BrushForge is proudly available natively on both <strong>iOS and
+                        Android</strong>.</p>
+                <p>The app offers a generous "Hobbyist" tier that is free forever, giving you access to the converter
+                    and basic organization tools (ad-supported). For power users who want unlimited tracking, advanced
+                    AI features, no ads, and multi-device Cloud Sync, we offer affordable premium plans.</p>
+                <p>Premium directly supports the solo development of this app and pays for the server costs that keep
+                    our paint database growing.</p>
+                <p>Curious about who builds BrushForge? <a href="the-story.html"
+                        style="color:var(--accent); text-decoration:underline;">Read The Story here</a>.</p>
 
-                <h2>Starting with iOS (and learning the hard way)</h2>
-                <p>BrushForge began on iOS.</p>
-                <p>It was my first proper mobile project in a while, and I relearned a lot the hard way: architecture
-                    mistakes, performance issues, weird edge cases, and of course users doing things you never expect.
-                </p>
-                <p>After some time, I decided to also build an Android version.</p>
-                <p>Ironically, Android ended up becoming the more complete app. Not because it’s better by default, but
-                    because I could apply everything I learned from iOS and just build it smarter the second time.</p>
-                <p>Right now Android has more features and a more active community. Once that version feels stable
-                    enough, I’ll bring those improvements back to iOS.</p>
-
-                <h2>Not vibecoded, but AI definitely helped</h2>
-                <p>When I started this project, “vibecoding” wasn’t even a thing yet.</p>
-                <p>BrushForge isn’t AI-generated or auto-built. It’s very much hand-made, feature by feature.</p>
-                <p>That said, AI tools helped a lot along the way. Especially with backend questions (I’m mostly
-                    frontend), tricky problems, and exploring different approaches when I got stuck.</p>
-                <p>For me it worked more like a learning partner than a shortcut.</p>
-                <p>And I was lucky to have a few friends helping out too.</p>
-
-                <h2>The hardest parts weren’t coding</h2>
-                <p>Building the app itself wasn’t the hardest part. Two things were much tougher.</p>
-
-                <h3>1. The paint database</h3>
-                <p>There’s no open-source paint database. No clean API. No easy solution.</p>
-                <p>So everything has to be done manually: collecting paints, cleaning data, verifying colors, fixing
-                    duplicates, and keeping it all up to date.</p>
-                <p>Some brands were kind enough to share official data (which helps a lot). Others never replied.</p>
-                <p>It’s slow work, but it’s gradually improving.</p>
-
-                <h3>2. Finding users (without being annoying)</h3>
-                <p>This one is harder than writing code.</p>
-                <p>I share the app on Reddit occasionally, but I really try not to spam or push it too hard. Growth is
-                    slow and organic.</p>
-                <p>Still, the feedback I’ve received so far has been very positive, and that honestly keeps me motivated
-                    to continue.</p>
-
-                <h2>Life + work + BrushForge</h2>
-                <p>BrushForge is still a side project.</p>
-                <p>So it’s:<br>
-                    a full-time job<br>
-                    life stuff<br>
-                    and the app</p>
-
-                <!-- Workplace Image -->
-                <figure style="margin: 40px -20px;">
-                    <img src="assets/images/Portrait.jpg" alt="The developer's miniature painting workspace"
-                        style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-                    <figcaption style="text-align:center; color:var(--muted); font-size:0.9rem; margin-top:12px;">My
-                        painting station, where the "midnight" part of MidnightMiniatures happens.</figcaption>
-                </figure>
-
-                <p>And recently… twins 😅</p>
-                <p>So time is limited.</p>
-                <p>Progress is sometimes slower than I’d like, but that’s okay. This is a long-term project, not a
-                    sprint.</p>
-
-                <h2>About pricing</h2>
-                <p>BrushForge was never meant to make me rich. It’s a hobby project first.</p>
-                <p>But there are real costs:</p>
-                <ul>
-                    <li>servers and backend</li>
-                    <li>store fees</li>
-                    <li>a lot of development hours</li>
-                </ul>
-                <p>And I live in a country with high taxes, so realistically I don’t keep much of what comes in.</p>
-                <p>I fully understand when people feel the pricing or limits are frustrating. I’m trying to find a
-                    balance that keeps the app sustainable while still being fair.</p>
-                <p>That balance is still evolving.</p>
-
-                <h2>What’s next?</h2>
-                <p>The goal hasn’t changed.</p>
-                <p>I want BrushForge to slowly become a solid toolkit for miniature painters. One place with useful
-                    tools, without getting in the way of the hobby itself.</p>
-                <p>Right now I’m focusing on:</p>
-                <ul>
-                    <li>bringing Android and iOS closer together feature-wise</li>
-                    <li>improving iOS again</li>
-                    <li>expanding and cleaning up the paint database</li>
-                    <li>working with more brands</li>
-                    <li>shipping features based on user feedback</li>
-                </ul>
-                <p>A lot of what exists today came directly from the community, and that’s how I want to keep building
-                    it.</p>
-
-                <h2>Why I keep doing this</h2>
-                <p>At the end of the day, I keep working on BrushForge because I enjoy it.</p>
-                <p>It helped me reconnect with programming, build something useful, and combine it with a hobby that
-                    genuinely helped me during a rough period.</p>
-                <p>It’s still very much a work in progress.</p>
-                <p>But it’s a fun one.</p>
             </div>
         </div>
 
         <!-- Bottom CTA -->
         <section id="get-app" class="section cta-final reveal">
             <div class="container" style="text-align:center;">
-                <h2 class="h2">Follow the Journey</h2>
-                <p class="p-lg">Join the community on Discord to see what's coming next.</p>
+                <h2 class="h2">Ready to start painting?</h2>
+                <p class="p-lg">Join thousands of hobbyists painting smarter.</p>
                 <div style="margin-top:24px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-                    <a href="https://discord.gg/U9yD96BhA4" class="btn primary"
-                        style="background:#5865F2; border-color:#5865F2; color:#fff;">Join Discord</a>
+                    <a class="btn primary"
+                        href="https://play.google.com/store/apps/details?id=io.brushforge.brushforge_android_app&pcampaignid=web_share">Get
+                        on Android</a>
+                    <a class="btn" href="https://apps.apple.com/be/app/brushforge/id6749896227">Download for iOS</a>
                 </div>
             </div>
         </section>
@@ -269,7 +163,8 @@
                 <span>BrushForge</span>
             </div>
             <div class="footer-links">
-                <a href="about.html">The Story</a>
+                <a href="about.html">About</a>
+                <a href="the-story.html">The Story</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
                 <a href="legal.html">Legal</a>
@@ -279,6 +174,14 @@
             <div class="small">© 2025 BrushForge. All rights reserved.</div>
         </div>
     </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="/#get-app" class="btn primary full-width">Get the App Free</a>
+    </div>
+
+    <!-- Vanilla Tilt (3D interactive cards) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </body>
 
 </html>
