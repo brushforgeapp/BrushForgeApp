@@ -311,40 +311,36 @@ img {
 .mockup-stack {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
   margin: 0 auto;
-  aspect-ratio: 4 / 4.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .mockup-stack .phone:nth-child(1) {
   position: absolute;
-  width: 65%;
-  left: 5%;
-  top: 10%;
+  width: 60%;
+  left: 0;
+  top: 0;
   z-index: 1;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .mockup-stack .phone:nth-child(2) {
-  position: absolute;
-  width: 75%;
-  right: 5%;
-  bottom: 0%;
+  position: relative;
+  width: 65%;
+  margin-left: auto;
+  margin-top: 15%;
   z-index: 2;
   filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.8));
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .mockup-stack:hover .phone:nth-child(1) {
-  transform: translateY(-5px) rotate(-2deg);
+  transform: translateY(-5px) translateX(-5px) rotate(-2deg);
 }
 
 .mockup-stack:hover .phone:nth-child(2) {
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-2px) translateX(5px) scale(1.02);
 }
 
 .pills {
