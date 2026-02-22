@@ -162,7 +162,9 @@
 
         <!-- Feature 1: Converter (Standard Split) -->
         <div class="grid grid-2" style="align-items:center; margin-bottom:100px;">
-          <div class="phone-frame order-2-mobile">
+          <div class="mockup-stack order-2-mobile">
+            <img loading="lazy" class="phone" src="assets/images/android-converter-2.png"
+              alt="Brushforge Converter Secondary View" />
             <img loading="lazy" class="phone" src="assets/images/android-converter.png"
               alt="Brushforge Paint Matching Tool" />
           </div>
@@ -194,6 +196,28 @@
           </div>
           <div class="phone-frame">
             <img loading="lazy" class="phone" src="assets/images/android-mypaints.png" alt="My Paints Inventory" />
+          </div>
+        </div>
+
+        <!-- Feature 2b: Paint Details (NEW) -->
+        <div class="grid grid-2" style="align-items:center; margin-bottom:100px;">
+          <div class="mockup-stack order-2-mobile">
+            <img loading="lazy" class="phone" src="assets/images/android-paint-detail-2.png"
+              alt="Similar and Complementary Paints" />
+            <img loading="lazy" class="phone" src="assets/images/android-paint-detail.png"
+              alt="Highlight and Shadow detection" />
+          </div>
+          <div>
+            <div class="kicker">Paint Details</div>
+            <h3 class="h2" style="margin-top:8px;">Deep dive into every paint.</h3>
+            <p class="p-lg">Clicking on any paint reveals everything you need to know. See instant highlight and shadow
+              recommendations, similar paints across brands, and a harmony wheel to build complementary color schemes.
+            </p>
+            <ul class="list">
+              <li><span class="check">✓</span> Highlights & Shadows</li>
+              <li><span class="check">✓</span> Brand Equivalents</li>
+              <li><span class="check">✓</span> Harmony Wheel</li>
+            </ul>
           </div>
         </div>
 
@@ -235,49 +259,59 @@
           <div>
             <div class="kicker">Projects & Recipes</div>
             <h3 class="h2" style="margin-top:8px;">Plan your masterpiece.</h3>
-            <p class="p-lg">Organize your work with full project management. Create step-by-step paint plans (Prime →
-              Base → Layer → Highlight) and save your favorite recipes.</p>
+            <p class="p-lg">Keep track of all your recipes in one place. Find new recipes, generate ideas using the
+              paints you already own, explore community creations, or share your own with the world.</p>
             <ul class="list">
-              <li><span class="check">✓</span> Step-by-step Plans</li>
-              <li><span class="check">✓</span> Color Schemes</li>
-              <li><span class="check">✓</span> Project Tracking</li>
+              <li><span class="check">✓</span> Recipe Tracking</li>
+              <li><span class="check">✓</span> AI Recipe Generator</li>
+              <li><span class="check">✓</span> Community Sharing</li>
             </ul>
           </div>
-          <div class="phone-frame">
-            <img loading="lazy" class="phone" src="assets/images/android-projects.png" alt="Projects and Recipes" />
+          <div class="mockup-stack">
+            <img loading="lazy" class="phone" src="assets/images/android-recipes-2.png" alt="Community Recipes" />
+            <img loading="lazy" class="phone" src="assets/images/android-recipes-1.png"
+              alt="Recipe Generator and Tracking" />
           </div>
         </div>
 
         <!-- Feature 5: AI & Tools (Grid) -->
         <div style="margin-bottom:40px;">
           <div style="text-align:center; margin-bottom:60px;">
-            <h2 class="h2">Smart Tools</h2>
-            <p class="p-lg">Advanced features to help you paint smarter.</p>
+            <div class="kicker">Smart Tools</div>
+            <h2 class="h2">Paint smarter, not harder.</h2>
+            <p class="p-lg" style="margin: 0 auto;">Powerful utilities to help you visualize your process and analyze
+              colors.</p>
           </div>
-          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:24px;">
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:32px;">
 
-            <div class="card">
-              <div class="kicker">Smart Tech</div>
-              <h4 class="h3" style="font-size:24px; margin:12px 0;">Recipe Generator</h4>
-              <p class="small">Describe a look ("rusty old metal") and get a recipe using your owned paints.</p>
-            </div>
-
-            <div class="card">
-              <div class="kicker">Utility</div>
-              <h4 class="h3" style="font-size:24px; margin:12px 0;">Scheme Analyzer</h4>
-              <p class="small">Upload a photo of a miniature and identify the closest matching paints.</p>
-            </div>
-
-            <div class="card">
-              <div class="kicker">Utility</div>
-              <h4 class="h3" style="font-size:24px; margin:12px 0;">Shopping List</h4>
-              <p class="small">Automatically generate a shopping list from recipes you want to try.</p>
-            </div>
-
-            <div class="card">
-              <div class="kicker">Utility</div>
+            <div style="text-align:center;">
+              <div class="phone-frame" style="margin-bottom:24px;">
+                <img loading="lazy" class="phone" src="assets/images/android-tools-1.png"
+                  alt="Lighting Tool Unpainted Mini Highlight" />
+              </div>
               <h4 class="h3" style="font-size:24px; margin:12px 0;">Lighting Tool</h4>
-              <p class="small">Visualize how your colors will look under different lighting conditions.</p>
+              <p class="small">Take a photo of your unpainted miniature before you start to visualize accurate
+                highlights and shadow placements.</p>
+            </div>
+
+            <div style="text-align:center;">
+              <div class="phone-frame" style="margin-bottom:24px;">
+                <img loading="lazy" class="phone" src="assets/images/android-tools-2.png"
+                  alt="Scheme Analyzer Painted Mini" />
+              </div>
+              <h4 class="h3" style="font-size:24px; margin:12px 0;">Scheme Analyzer</h4>
+              <p class="small">Upload a photo of a painted miniature or concept art, and we'll identify the paints used
+                to achieve that look.</p>
+            </div>
+
+            <div style="text-align:center;">
+              <div class="phone-frame" style="margin-bottom:24px;">
+                <img loading="lazy" class="phone" src="assets/images/android-tools-3.png"
+                  alt="Paint Generator and List" />
+              </div>
+              <h4 class="h3" style="font-size:24px; margin:12px 0;">Shopping List & Utility</h4>
+              <p class="small">Automatically build shopping lists based on the recipes you want to try, and ensure you
+                never miss a color.</p>
             </div>
 
           </div>
