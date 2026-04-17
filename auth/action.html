@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrushForge - Authentication</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --bg: #050507;
+          --surface: rgba(22, 24, 29, 0.6);
+          --text: #eef2f6;
+          --muted: #94a3b8;
+          --border: rgba(255, 255, 255, 0.08);
+          --accent: #f0c75e;
+          --primary-gradient: linear-gradient(135deg, #F7C96C 0%, #E9A842 100%);
+          --radius-xl: 24px;
+          --font-display: 'Eczar', serif;
+          --font-body: 'Inter', sans-serif;
+          --glass-bg: rgba(255, 255, 255, 0.03);
+          --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image:
+              radial-gradient(circle at 15% 50%, rgba(80, 50, 200, 0.06), transparent 50%),
+              radial-gradient(circle at 85% 30%, rgba(240, 199, 94, 0.06), transparent 50%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            object-fit: cover;
+            margin: 0 auto 24px auto;
+            box-shadow: 0 0 15px rgba(240, 199, 94, 0.4);
+            display: block;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 32px;
+            margin: 0 0 12px 0;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--muted);
+            margin: 0 0 32px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+            font-family: var(--font-body);
+            box-sizing: border-box;
+        }
+
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: #050507;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 20px rgba(240, 199, 94, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(240, 199, 94, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--text);
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-secondary:not(:disabled):hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--muted);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 16px;
+            transition: border-color 0.2s, background 0.2s;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 3px rgba(240, 199, 94, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(148, 163, 184, 0.5);
+        }
+
+        /* States */
+        .state {
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .state.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Spinner for loading state */
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--accent);
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 24px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Icon indicators */
+        .icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            font-size: 32px;
+        }
+
+        .icon-success {
+            background: rgba(46, 213, 115, 0.1);
+            color: #2ed573;
+            border: 1px solid rgba(46, 213, 115, 0.2);
+        }
+
+        .icon-error {
+            background: rgba(255, 71, 87, 0.1);
+            color: #ff4757;
+            border: 1px solid rgba(255, 71, 87, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Uses absolute path so it loads locally or on remote perfectly -->
+            <img src="/assets/images/logo.jpg" alt="BrushForge Logo" class="logo" onerror="this.style.display='none'">
+            
+            <!-- Loading State -->
+            <div id="state-loading" class="state active">
+                <div class="spinner"></div>
+                <h1>Verifying...</h1>
+                <p>Please wait while we process your request.</p>
+            </div>
+
+            <!-- Success State -->
+            <div id="state-success" class="state">
+                <div class="icon icon-success">✓</div>
+                <h1 id="success-title">Email verified</h1>
+                <p id="success-text">Your email has been confirmed.</p>
+                <button id="btn-success" class="btn btn-primary">Open Brushforge</button>
+            </div>
+
+            <!-- Error State -->
+            <div id="state-error" class="state">
+                <div class="icon icon-error">✕</div>
+                <h1 id="error-title">Invalid or expired link</h1>
+                <p id="error-text">This verification link is invalid or has expired.</p>
+                <button onclick="window.location.href='/'" class="btn btn-secondary">Back to homepage</button>
+            </div>
+            
+            <!-- Reset Password State -->
+            <div id="state-reset" class="state">
+                <h1>Reset Password</h1>
+                <p id="reset-email-hint">Choose a new password for your account.</p>
+                
+                <form id="reset-form">
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" class="form-control" placeholder="Enter new password" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="form-control" placeholder="Confirm new password" required minlength="6">
+                    </div>
+                    <button type="submit" id="btn-reset-password" class="btn btn-primary" style="margin-top: 12px;">Save Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getAuth, applyActionCode, verifyPasswordResetCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3dgMCvqUtd70zLSpy_0zvL46RsSMKbk4",
+            authDomain: "brushforge-82a81.firebaseapp.com",
+            projectId: "brushforge-82a81",
+            storageBucket: "brushforge-82a81.firebasestorage.app",
+            messagingSenderId: "138727125754",
+            appId: "1:138727125754:web:22961126a373a9c8930f43",
+            measurementId: "G-Y9S5DMZQ38"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // UI Helpers
+        const states = {
+            loading: document.getElementById('state-loading'),
+            success: document.getElementById('state-success'),
+            error: document.getElementById('state-error'),
+            reset: document.getElementById('state-reset')
+        };
+
+        function showState(stateName) {
+            Object.values(states).forEach(el => {
+                if (el) el.classList.remove('active');
+            });
+            if (states[stateName]) {
+                states[stateName].classList.add('active');
+            }
+        }
+
+        function showError(title, message) {
+            document.getElementById('error-title').textContent = title;
+            document.getElementById('error-text').textContent = message;
+            showState('error');
+        }
+
+        // Action Handler Logic
+        async function handleAction() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const mode = urlParams.get('mode');
+            const oobCode = urlParams.get('oobCode');
+            const continueUrl = urlParams.get('continueUrl');
+
+            if (!mode || !oobCode) {
+                showError('Invalid link', 'The link you clicked is missing necessary information.');
+                return;
+            }
+
+            if (mode === 'verifyEmail') {
+                try {
+                    await applyActionCode(auth, oobCode);
+                    showState('success');
+                    
+                    document.getElementById('btn-success').addEventListener('click', () => {
+                        window.location.href = continueUrl || '/';
+                    });
+                } catch (error) {
+                    console.error('Email verification error:', error);
+                    showError('Invalid or expired link', 'This verification link is invalid or has expired.');
+                }
+            } else if (mode === 'resetPassword') {
+                try {
+                    const email = await verifyPasswordResetCode(auth, oobCode);
+                    document.getElementById('reset-email-hint').textContent = `Resetting password for ${email}`;
+                    showState('reset');
+
+                    document.getElementById('reset-form').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        
+                        const newPassword = document.getElementById('new-password').value;
+                        const confirmPassword = document.getElementById('confirm-password').value;
+                        const submitBtn = document.getElementById('btn-reset-password');
+
+                        if (newPassword !== confirmPassword) {
+                            alert('Passwords do not match.');
+                            return;
+                        }
+
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Saving...';
+
+                        try {
+                            await confirmPasswordReset(auth, oobCode, newPassword);
+                            
+                            document.getElementById('success-title').textContent = 'Password Reset';
+                            document.getElementById('success-text').textContent = 'Your password has been updated securely.';
+                            document.getElementById('btn-success').textContent = 'Open Brushforge';
+                            
+                            // Re-bind click correctly
+                            const successBtn = document.getElementById('btn-success');
+                            // Clear existing listeners by replacing the node
+                            const newBtn = successBtn.cloneNode(true);
+                            successBtn.parentNode.replaceChild(newBtn, successBtn);
+                            
+                            newBtn.addEventListener('click', () => {
+                                window.location.href = '/';
+                            });
+                            
+                            showState('success');
+                        } catch (error) {
+                            console.error('Password reset error:', error);
+                            alert('Failed to reset password. The link might have expired.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Save Password';
+                        }
+                    });
+                } catch (error) {
+                    console.error('Verify reset code error:', error);
+                    showError('Invalid or expired link', 'This password reset link is invalid or has expired.');
+                }
+            } else {
+                showError('Unknown Request', 'The requested action is not supported.');
+            }
+        }
+
+        // Initialize execution after DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+             handleAction().catch(error => {
+                 console.error("Critical error handling action:", error);
+                 showError("Unexpected Error", "Something went wrong. Please try again later.");
+             });
+        });
+
+    </script>
+</body>
+</html>
