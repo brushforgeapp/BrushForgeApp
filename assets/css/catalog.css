@@ -1,4 +1,4 @@
-/* BrushForge catalog pages — component layer on top of site.css tokens.
+/* BrushForge catalog pages: component layer on top of site.css tokens.
    Namespaced bf-* so it can be adopted page-by-page across the rest of the site. */
 
 .bf-main { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }

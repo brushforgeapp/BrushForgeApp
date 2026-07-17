@@ -1,6 +1,6 @@
 # BrushForge
 
-> BrushForge is a free mobile app (Android & iOS) for miniature painters. It converts paints between brands using Delta E 2000 color science, tracks your paint collection, and generates painting recipes. The database covers 4,300+ paints across Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl, and more — for Warhammer 40k, Age of Sigmar, D&D, and other tabletop miniatures.
+> BrushForge is a free mobile app (Android & iOS) for miniature painters. It converts paints between brands using Delta E 2000 color science, tracks your paint collection, and generates painting recipes. The database covers 4,300+ paints across Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl, and more, for Warhammer 40k, Age of Sigmar, D&D, and other tabletop miniatures.
 
 Key facts:
 
@@ -10,18 +10,18 @@ Key facts:
 - Paint details: every paint shows highlight and shadow suggestions, cross-brand equivalents, and a color harmony wheel.
 - Recipes & projects: save painting recipes, generate new ones with the AI recipe generator, and share them with the community (community features in Android beta).
 - Smart tools: Lighting Tool (preview zenithal or noir lighting on a photo of an unpainted miniature) and Scheme Analyzer (upload a photo of a painted miniature to identify the paints used).
-- Pricing: the Hobbyist tier is free forever (ad-supported, with limits of 40 inventory paints, 5 recipes, 1 project, and 5 generator tokens per month). The Master premium tier — subscription or one-time lifetime purchase — unlocks unlimited inventory, recipes, and projects, 100 generator tokens per month, multi-device cloud sync, and no ads.
+- Pricing: the Hobbyist tier is free forever (ad-supported, with limits of 40 inventory paints, 5 recipes, 1 project, and 5 generator tokens per month). The Master premium tier (subscription or one-time lifetime purchase) unlocks unlimited inventory, recipes, and projects, 100 generator tokens per month, multi-device cloud sync, and no ads.
 - Platforms: Android (Google Play) and iOS (App Store). The app is offline-first. Data does not yet sync between iOS and Android.
-- Screen colors are approximate: paint swatches on screen vary with finish, lighting, night-mode filters and display calibration — they are meant for comparing relative differences, with the physical paint as final reference.
+- Screen colors are approximate: paint swatches on screen vary with finish, lighting, night-mode filters and display calibration. They are meant for comparing relative differences, with the physical paint as final reference.
 - BrushForge is an independent app by a solo developer and is not affiliated with, endorsed, or sponsored by Games Workshop Limited.
 
 ## Paint conversion charts & database
 
-- [Conversion charts](https://brushforgeapp.com/convert/): free brand-to-brand equivalence charts for every pair of Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl, Two Thin Coats, and Kimera Kolors — matched with ΔE2000 color distance
+- [Conversion charts](https://brushforgeapp.com/convert/): free brand-to-brand equivalence charts for every pair of Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl, Two Thin Coats, and Kimera Kolors, matched with ΔE2000 color distance
 - [Citadel to Vallejo conversion chart](https://brushforgeapp.com/convert/citadel-to-vallejo.html)
 - [Citadel to Army Painter conversion chart](https://brushforgeapp.com/convert/citadel-to-army-painter.html)
 - [Vallejo to Citadel conversion chart](https://brushforgeapp.com/convert/vallejo-to-citadel.html)
-- [Paint database](https://brushforgeapp.com/paints/): 2,900+ brush-on, metallic and wash miniature paints; every paint has its own page with the closest equivalent in each other brand (with ΔE2000 scores), similar colors, and highlight/shadow suggestions. The BrushForge app database is larger still — 4,300+ paints including airbrush and spray ranges — and is updated continuously.
+- [Paint database](https://brushforgeapp.com/paints/): 2,900+ brush-on, metallic and wash miniature paints; every paint has its own page with the closest equivalent in each other brand (with ΔE2000 scores), similar colors, and highlight/shadow suggestions. The BrushForge app database is larger still (4,300+ paints including airbrush and spray ranges) and is updated continuously.
 
 ## Pages
 
@@ -34,8 +34,8 @@ Key facts:
 
 ## Get the app
 
-- [Android — Google Play](https://play.google.com/store/apps/details?id=io.brushforge.brushforge_android_app)
-- [iOS — App Store](https://apps.apple.com/be/app/brushforge/id6749896227)
+- [Android (Google Play)](https://play.google.com/store/apps/details?id=io.brushforge.brushforge_android_app)
+- [iOS (App Store)](https://apps.apple.com/be/app/brushforge/id6749896227)
 - [Community Discord](https://discord.gg/U9yD96BhA4)
 
 ## Contact

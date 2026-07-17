@@ -1,4 +1,4 @@
-# robots.txt — brushforgeapp.com
+# robots.txt - brushforgeapp.com
 # Search engines and AI assistants are welcome to crawl this site.
 
 # --- AI assistants & AI search crawlers (explicitly allowed) ---

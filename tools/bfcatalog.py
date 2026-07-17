@@ -294,6 +294,8 @@ def load_catalog(db_path=DEFAULT_DB):
             skipped[key].append(f"{brand} / {name} ({line}) [{typ}/{finish}]")
             continue
         r, g, b = c["r"], c["g"], c["b"]
+        name = name.replace("–", "-").replace("—", "-")
+        line = (line or "").replace("–", "-").replace("—", "-")
         paints.append({
             "id": pid, "name": name, "brand": brand, "line": line or "",
             "line_variant": line_variant or "", "code": code or "",

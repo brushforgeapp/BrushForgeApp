@@ -28,7 +28,7 @@ document.addEventListener('click', async (e) => {
   if (!btn) return;
   e.preventDefault();
   const shareData = {
-    title: 'BrushForge — Paint converter & toolkit',
+    title: 'BrushForge | Paint converter & toolkit',
     text: "I'm testing this app for miniature painters. Join the TestFlight beta:",
     url: 'https://testflight.apple.com/join/2jnGZJss'
   };

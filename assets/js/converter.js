@@ -1,4 +1,4 @@
-/* BrushForge web converter — same matching engine as the app.
+/* BrushForge web converter: same matching engine as the app.
    sRGB→LAB (D65) + CIEDE2000, finish-group pooling, ΔE tier wording.
    Data: /assets/data/paints.min.json (lazy-loaded on first interaction). */
 (function () {
@@ -293,7 +293,7 @@
           '<div class="bfc-pills" role="group" aria-label="Target brand">' + pills.join("") + "</div>" +
           '<div class="bf-rows">' + rowsHtml +
           '<div class="bf-tease"><span>The app ranks up to 50 matches with filters, mixing recipes ' +
-          "and your own inventory — offline.</span>" +
+          "and your own inventory, all offline.</span>" +
           '<a href="' + APP_URL + '" rel="noopener">Get BrushForge free &rarr;</a></div></div>';
       panel.hidden = false;
       panel.querySelectorAll(".bfc-pill").forEach(function (btn) {

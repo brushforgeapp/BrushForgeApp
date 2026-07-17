@@ -182,13 +182,13 @@ def converter_section(source_brand=None, target_brand=None):
     if target_brand:
         attrs += f' data-target-brand="{esc(target_brand)}"'
     if source_brand:
-        ph = f"Search a {esc(disp(source_brand))} paint — name or code…"
+        ph = f"Search a {esc(disp(source_brand))} paint by name or code…"
         sub = (f"Type any {esc(disp(source_brand))} paint and get the closest "
-               f"{esc(disp(target_brand)) if target_brand else 'cross-brand'} matches instantly — "
-               "same ΔE2000 engine as the app.")
+               f"{esc(disp(target_brand)) if target_brand else 'cross-brand'} matches instantly, "
+               "using the same ΔE2000 engine as the app.")
     else:
-        ph = "Search 2,900+ paints — name, code or brand…"
-        sub = "Pick any paint, get the closest match in every brand instantly — same ΔE2000 engine as the app."
+        ph = "Search 2,900+ paints by name, code or brand…"
+        sub = "Pick any paint, get the closest match in every brand instantly, using the same ΔE2000 engine as the app."
     return f"""<section class="bfc"{attrs}>
 <h2 class="bfc-title">Instant converter</h2>
 <p class="bfc-sub">{sub}</p>
@@ -199,18 +199,18 @@ def converter_section(source_brand=None, target_brand=None):
 </div>
 <div class="bfc-status" aria-live="polite"></div>
 <div class="bfc-panel" hidden></div>
-<noscript><p class="bfc-sub">The instant converter needs JavaScript — or browse the chart below, which works everywhere.</p></noscript>
+<noscript><p class="bfc-sub">The instant converter needs JavaScript. No problem: the chart below works everywhere.</p></noscript>
 </section>"""
 
 
 def legend():
     return ('<div class="bf-legend"><b>ΔE2000 color distance:</b>'
-            '<span><span class="bf-de excellent">0–2</span> nearly identical</span>'
-            '<span><span class="bf-de good">2–5</span> close match</span>'
-            '<span><span class="bf-de fair">6–10</span> noticeable difference</span>'
+            '<span><span class="bf-de excellent">0-2</span> nearly identical</span>'
+            '<span><span class="bf-de good">2-5</span> close match</span>'
+            '<span><span class="bf-de fair">6-10</span> noticeable difference</span>'
             '<span><span class="bf-de poor">10+</span> different color</span></div>'
             '<p class="bf-disclaimer"><b>Screen preview:</b> paint swatches on screen are '
-            'approximate — finish, lighting, night-mode filters and display calibration all '
+            'approximate: finish, lighting, night-mode filters and display calibration all '
             'change what you see. Use them to compare relative differences, then confirm with '
             'the physical paint when finish and final appearance matter.</p>')
 
@@ -333,7 +333,7 @@ def chart_page(src_brand, dst_brand, paints, pre):
                 meta = esc(paint_line_label(c))
                 decell = f'<span class="bf-de {tier_class(d)}">{fmt_de(d)}</span>'
             else:
-                right, meta, decell = '<span class="meta">no close equivalent</span>', "—", "—"
+                right, meta, decell = '<span class="meta">no close equivalent</span>', "&middot;", "&middot;"
             trs.append(f"<tr><td>{left}</td><td>{right}</td>"
                        f'<td class="meta">{meta}</td><td class="num">{decell}</td></tr>')
         tables.append(
@@ -350,16 +350,16 @@ def chart_page(src_brand, dst_brand, paints, pre):
          f"indistinguishable on a miniature, and below 5 reads the same on the tabletop. "
          f"{pct5}% of {ad} paints here have a {bd} equivalent with ΔE 5 or less."),
         ("How accurate is this chart?",
-         "Matches are computed in LAB color space with the industry-standard CIEDE2000 formula — the "
+         "Matches are computed in LAB color space with the industry-standard CIEDE2000 formula, the "
          "same engine the BrushForge app uses. Metallics are only matched to metallics, and washes "
          "to washes. Colors shown are screen approximations of real paint."),
         ("What does the ΔE number mean?",
-         "ΔE2000 measures how different two colors look to the human eye. 0–2: nearly identical. "
-         "2–5: close match. 6–10: noticeable difference. Above 10: a different color. "
+         "ΔE2000 measures how different two colors look to the human eye. 0-2: nearly identical. "
+         "2-5: close match. 6-10: noticeable difference. Above 10: a different color. "
          "Aim for ΔE below 5 for a solid substitute."),
         ("Why is a paint missing from this chart?",
          "This chart lists brush-on, metallic and wash paints with verified color data. Airbrush "
-         "lines, sprays, primers and technical products are not shown on the web — the BrushForge "
+         "lines, sprays, primers and technical products are not shown on the web. The BrushForge "
          "app carries the full database of 4,300+ paints, including those ranges, and it grows "
          "with every update."),
     ]
@@ -375,12 +375,12 @@ def chart_page(src_brand, dst_brand, paints, pre):
     body = f"""{crumbs(crumb_items)}
 <div class="bf-hero"><div>
 <h1>{esc(ad)} to {esc(bd)} conversion chart</h1>
-<p class="sub">The closest {esc(bd)} equivalent for every {esc(ad)} paint — {total} paints matched
+<p class="sub">The closest {esc(bd)} equivalent for every {esc(ad)} paint: {total} paints matched
 with ΔE2000 color science, the same engine as the BrushForge app.</p>
 <p class="bf-updated">Updated {TODAY_HUMAN} &middot; BrushForge paint database</p>
 </div></div>
 <p class="bf-updated">Charts cover brush-on, metallic and wash paints. Airbrush ranges and sprays are
-in the BrushForge app — 4,300+ paints in total, updated continuously.</p>
+in the BrushForge app (4,300+ paints in total, updated continuously).</p>
 {converter_section(a, b)}
 <div class="bf-stats">
 <div class="bf-stat"><div class="n">{total}</div><div class="l">{esc(ad)} paints matched</div></div>
@@ -393,7 +393,7 @@ in the BrushForge app — 4,300+ paints in total, updated continuously.</p>
 {''.join(tables)}
 {cta_band(f'chart-{a_slug}-to-{b_slug}',
           'Stop scrolling charts at the paint desk.',
-          'The free BrushForge app looks this up in two taps — plus highlight and shadow suggestions, '
+          'The free BrushForge app looks this up in two taps, plus highlight and shadow suggestions, '
           'mixing recipes, and matching against the paints you already own. Works offline.')}
 {faq_html(qas)}
 <h2 class="bf-h2">Related charts</h2>
@@ -402,7 +402,7 @@ in the BrushForge app — 4,300+ paints in total, updated continuously.</p>
 {''.join(f'<a href="/convert/{a_slug}-to-{brand_slug(x)}.html">{esc(ad)} to {esc(disp(x))}</a>'
          for x in sorted(bf.BRAND_SLUGS) if x not in (a, b))}
 </div>"""
-    title = f"{ad} to {bd} Conversion Chart — every paint matched | BrushForge"
+    title = f"{ad} to {bd} Conversion Chart: every paint matched | BrushForge"
     desc = (f"Free {ad} to {bd} paint conversion chart: the closest {bd} equivalent for {total} {ad} "
             f"paints, scored with ΔE2000 color distance. {pct5}% match at ΔE ≤ 5.")
     schemas = [breadcrumb_schema(crumb_items, canonical), dataset, faq_schema(qas)]
@@ -477,11 +477,11 @@ pick highlights from the paints you already own.</span>
             f'<div class="rmeta">{esc(disp(c["brand"]))} &middot; {esc(paint_line_label(c))}</div></div></a>'
             for c in comp)
         comp_html = f"""<h2 class="bf-h2">Complementary paints</h2>
-<p class="bf-sectionsub">Opposite-hue paints that make {esc(p['name'])} pop — for basing,
+<p class="bf-sectionsub">Opposite-hue paints that make {esc(p['name'])} pop. Great for basing,
 freehand, or contrast details.</p>
 <div class="bf-rows">{chips}
-<div class="bf-tease"><span>The full harmony wheel — split-complementary, triadic, analogous, and
-warm/cool variants — lives in the app.</span>
+<div class="bf-tease"><span>The full harmony wheel with split-complementary, triadic, analogous, and
+warm/cool variants lives in the app.</span>
 <a href="{play_url('harmony-tease')}" rel="noopener">Explore it free &rarr;</a></div></div>"""
 
     top = equivalents[0] if equivalents else None
@@ -497,7 +497,7 @@ warm/cool variants — lives in the app.</span>
             f"What is the {disp(c['brand'])} equivalent of {p['name']}?",
             f"The closest {disp(c['brand'])} match for {disp(p['brand'])} {p['name']} is {c['name']}"
             + (f" ({c['code']}, {paint_line_label(c)})" if c["code"] else f" ({paint_line_label(c)})")
-            + f" with a ΔE2000 distance of {fmt_de(d)} — {bf.de_scale(d)[0]}."))
+            + f" with a ΔE2000 distance of {fmt_de(d)} ({bf.de_scale(d)[0]})."))
 
     charts_for_brand = "".join(
         f'<a href="/convert/{b_slug}-to-{brand_slug(x)}.html">{esc(disp(p["brand"]))} to {esc(disp(x))} chart</a>'
@@ -506,9 +506,9 @@ warm/cool variants — lives in the app.</span>
     body = f"""{crumbs(crumb_items)}
 <div class="bf-hero">
 <span class="bf-swatch-xl{' bf-metallic' if p['pool'] == 'metallic' else ''}" style="background:{p['hex']}"></span>
-<div><h1>{esc(p['name'])} — equivalents &amp; matches</h1>
+<div><h1>{esc(p['name'])}: equivalents &amp; matches</h1>
 <p class="sub">{esc(disp(p['brand']))} &middot; {esc(paint_line_label(p))}{f" &middot; {esc(p['code'])}" if p['code'] else ''}.
-The closest match in every major brand, plus highlight, shadow and complement picks — computed
+The closest match in every major brand, plus highlight, shadow and complement picks, computed
 with the BrushForge color engine.</p>
 <div class="bf-chips">
 <span class="bf-chip">hex <strong>{p['hex']}</strong></span>
@@ -535,7 +535,7 @@ with the BrushForge color engine.</p>
 <a href="/paints/{b_slug}/">All {esc(disp(p['brand']))} paints</a>
 {charts_for_brand}
 </div>"""
-    title = f"{p['name']} ({disp(p['brand'])}) — equivalents in every brand | BrushForge"
+    title = f"{p['name']} ({disp(p['brand'])}) equivalents in every brand | BrushForge"
     d_top = f" Closest match: {disp(top[1]['brand'])} {top[1]['name']} (ΔE {fmt_de(top[0])})." if top else ""
     desc = (f"{disp(p['brand'])} {p['name']}{' ' + p['code'] if p['code'] else ''}: cross-brand paint "
             f"equivalents, similar colors, highlight & shadow picks.{d_top}")
@@ -569,17 +569,17 @@ def brand_hub(brand, paints):
     crumb_items = [("Home", "/"), ("Paints", "/paints/"), (disp(brand), None)]
     body = f"""{crumbs(crumb_items)}
 <div class="bf-hero"><div>
-<h1>{esc(disp(brand))} paints — full database</h1>
+<h1>{esc(disp(brand))} paints: full database</h1>
 <p class="sub">{len(mine)} {esc(disp(brand))} paints with cross-brand equivalents, similar colors and
 highlight/shadow picks on every page.</p>
-<p class="bf-updated">Updated {TODAY_HUMAN} &middot; brush-on, metallic and wash ranges — the
+<p class="bf-updated">Updated {TODAY_HUMAN} &middot; brush-on, metallic and wash ranges. The
 BrushForge app also covers airbrush and spray lines (4,300+ paints in total).</p>
 </div></div>
 <div class="bf-toc">{toc}</div>
 {''.join(sections)}
 {cta_band(f'hub-{b_slug}', 'Your whole paint rack, searchable.',
-          'Track which of these you own, find gaps in your collection, and convert to any brand — free in the BrushForge app.')}"""
-    title = f"{disp(brand)} Paint Database — every color, with equivalents | BrushForge"
+          'Track which of these you own, find gaps in your collection, and convert to any brand, free in the BrushForge app.')}"""
+    title = f"{disp(brand)} Paint Database: every color, with equivalents | BrushForge"
     desc = (f"Browse all {len(mine)} {disp(brand)} miniature paints: color swatches, codes, and the "
             f"closest equivalents in Vallejo, Citadel, Army Painter, AK and more.")
     return url_path + "index.html", shell(title=title, desc=desc, canonical=canonical,
@@ -603,11 +603,11 @@ def paints_index(paints):
 <div class="bf-hero"><div>
 <h1>The miniature paint database</h1>
 <p class="sub">{sum(counts.values())} paints across {len(counts)} brands. Every page shows the
-closest equivalent in each other brand, similar colors, and highlight &amp; shadow picks —
+closest equivalent in each other brand, similar colors, and highlight &amp; shadow picks,
 powered by the BrushForge ΔE2000 color engine.</p>
 <p class="bf-updated">Updated {TODAY_HUMAN} &middot; the site lists brush-on, metallic and wash
-paints; the full app database is larger — 4,300+ paints including airbrush lines, sprays and
-primers — and keeps growing.</p>
+paints; the full app database is larger (4,300+ paints including airbrush lines, sprays and
+primers) and keeps growing.</p>
 </div></div>
 <div class="bf-hubgrid">{cards}</div>
 <h2 class="bf-h2">Conversion charts</h2>
@@ -615,9 +615,9 @@ primers — and keeps growing.</p>
 <div class="bf-related"><a href="/convert/">Browse all conversion charts &rarr;</a></div>
 {cta_band('paints-index', 'The full database fits in your pocket.',
           'Convert, track and organize your paints offline with the free BrushForge app.')}"""
-    title = "Miniature Paint Database — 2,900+ paints, all brands | BrushForge"
+    title = "Miniature Paint Database: 2,900+ paints, all brands | BrushForge"
     desc = ("Free database of 2,900+ miniature paints from Citadel, Vallejo, Army Painter, AK, "
-            "Scale75, Pro Acryl and more — with cross-brand equivalents for every color.")
+            "Scale75, Pro Acryl and more, with cross-brand equivalents for every color.")
     return "/paints/index.html", shell(title=title, desc=desc, canonical=canonical, body=body,
                                        schemas=[breadcrumb_schema(crumb_items, canonical)], active="paints")
 
@@ -637,7 +637,7 @@ def convert_index(chart_paths):
 <div class="bf-hero"><div>
 <h1>Paint conversion charts</h1>
 <p class="sub">Free brand-to-brand equivalence charts for miniature paints, matched with ΔE2000
-color science — Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl,
+color science: Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl,
 Two Thin Coats and Kimera.</p>
 <p class="bf-updated">Updated {TODAY_HUMAN}</p>
 </div></div>
@@ -645,8 +645,8 @@ Two Thin Coats and Kimera.</p>
 <h2 class="bf-h2">All charts by brand</h2>
 {''.join(sections)}
 {cta_band('convert-index', 'Charts are handy. The converter is instant.',
-          'Search any of 4,300+ paints and convert to any brand in two taps — free, offline, in the BrushForge app.')}"""
-    title = "Miniature Paint Conversion Charts — all brands | BrushForge"
+          'Search any of 4,300+ paints and convert to any brand in two taps. Free and offline in the BrushForge app.')}"""
+    title = "Miniature Paint Conversion Charts: all brands | BrushForge"
     desc = ("Free paint conversion charts for every brand pair: Citadel to Vallejo, Army Painter, "
             "AK, Scale75 and more. ΔE2000-matched equivalents for 2,600+ paints.")
     return "/convert/index.html", shell(title=title, desc=desc, canonical=canonical, body=body,
