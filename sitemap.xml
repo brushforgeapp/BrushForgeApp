@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://brushforgeapp.com/</loc><lastmod>2026-07-17</lastmod></url>
-  <url><loc>https://brushforgeapp.com/about.html</loc><lastmod>2026-07-17</lastmod></url>
-  <url><loc>https://brushforgeapp.com/the-story.html</loc><lastmod>2026-07-17</lastmod></url>
-  <url><loc>https://brushforgeapp.com/support.html</loc><lastmod>2026-07-17</lastmod></url>
-  <url><loc>https://brushforgeapp.com/privacy.html</loc><lastmod>2026-07-17</lastmod></url>
-  <url><loc>https://brushforgeapp.com/terms.html</loc><lastmod>2026-07-17</lastmod></url>
-  <url><loc>https://brushforgeapp.com/legal.html</loc><lastmod>2026-07-17</lastmod></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://brushforgeapp.com/sitemap-core.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-charts.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-ak-interactive.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-army-painter.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-citadel.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-kimera-kolors.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-pro-acryl.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-scale75.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-two-thin-coats.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-vallejo.xml</loc><lastmod>2026-07-17</lastmod></sitemap><sitemap><loc>https://brushforgeapp.com/sitemap-paints-index.xml</loc><lastmod>2026-07-17</lastmod></sitemap></sitemapindex>

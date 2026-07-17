@@ -14,6 +14,14 @@ Key facts:
 - Platforms: Android (Google Play) and iOS (App Store). The app is offline-first. Data does not yet sync between iOS and Android.
 - BrushForge is an independent app by a solo developer and is not affiliated with, endorsed, or sponsored by Games Workshop Limited.
 
+## Paint conversion charts & database
+
+- [Conversion charts](https://brushforgeapp.com/convert/): free brand-to-brand equivalence charts for every pair of Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro Acryl, Two Thin Coats, and Kimera Kolors — matched with ΔE2000 color distance
+- [Citadel to Vallejo conversion chart](https://brushforgeapp.com/convert/citadel-to-vallejo.html)
+- [Citadel to Army Painter conversion chart](https://brushforgeapp.com/convert/citadel-to-army-painter.html)
+- [Vallejo to Citadel conversion chart](https://brushforgeapp.com/convert/vallejo-to-citadel.html)
+- [Paint database](https://brushforgeapp.com/paints/): 2,900+ brush-on, metallic and wash miniature paints; every paint has its own page with the closest equivalent in each other brand (with ΔE2000 scores), similar colors, and highlight/shadow suggestions. The BrushForge app database is larger still — 4,300+ paints including airbrush and spray ranges — and is updated continuously.
+
 ## Pages
 
 - [Home](https://brushforgeapp.com/): features, pricing, and frequently asked questions
