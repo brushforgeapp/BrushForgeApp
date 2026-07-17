@@ -208,7 +208,11 @@ def legend():
             '<span><span class="bf-de excellent">0–2</span> nearly identical</span>'
             '<span><span class="bf-de good">2–5</span> close match</span>'
             '<span><span class="bf-de fair">6–10</span> noticeable difference</span>'
-            '<span><span class="bf-de poor">10+</span> different color</span></div>')
+            '<span><span class="bf-de poor">10+</span> different color</span></div>'
+            '<p class="bf-disclaimer"><b>Screen preview:</b> paint swatches on screen are '
+            'approximate — finish, lighting, night-mode filters and display calibration all '
+            'change what you see. Use them to compare relative differences, then confirm with '
+            'the physical paint when finish and final appearance matter.</p>')
 
 
 def swatch(hexcolor, metallic=False, size=""):

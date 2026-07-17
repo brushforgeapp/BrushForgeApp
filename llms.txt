@@ -12,6 +12,7 @@ Key facts:
 - Smart tools: Lighting Tool (preview zenithal or noir lighting on a photo of an unpainted miniature) and Scheme Analyzer (upload a photo of a painted miniature to identify the paints used).
 - Pricing: the Hobbyist tier is free forever (ad-supported, with limits of 40 inventory paints, 5 recipes, 1 project, and 5 generator tokens per month). The Master premium tier — subscription or one-time lifetime purchase — unlocks unlimited inventory, recipes, and projects, 100 generator tokens per month, multi-device cloud sync, and no ads.
 - Platforms: Android (Google Play) and iOS (App Store). The app is offline-first. Data does not yet sync between iOS and Android.
+- Screen colors are approximate: paint swatches on screen vary with finish, lighting, night-mode filters and display calibration — they are meant for comparing relative differences, with the physical paint as final reference.
 - BrushForge is an independent app by a solo developer and is not affiliated with, endorsed, or sponsored by Games Workshop Limited.
 
 ## Paint conversion charts & database
