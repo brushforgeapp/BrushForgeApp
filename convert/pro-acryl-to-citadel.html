@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <link rel="stylesheet" href="/assets/css/catalog.css">
+<script defer src="/assets/js/converter.js"></script>
 </head>
 <body>
 <header class="header"><div class="container nav">
@@ -40,6 +41,18 @@ with ΔE2000 color science, the same engine as the BrushForge app.</p>
 </div></div>
 <p class="bf-updated">Charts cover brush-on, metallic and wash paints. Airbrush ranges and sprays are
 in the BrushForge app — 4,300+ paints in total, updated continuously.</p>
+<section class="bfc" data-source-brand="Monument Hobbies" data-target-brand="Citadel">
+<h2 class="bfc-title">Instant converter</h2>
+<p class="bfc-sub">Type any Pro Acryl paint and get the closest Citadel matches instantly — same ΔE2000 engine as the app.</p>
+<div class="bfc-wrap">
+<label class="sr-only" for="bfc-q" style="position:absolute;left:-9999px;">Search paints</label>
+<input class="bfc-input" id="bfc-q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a Pro Acryl paint — name or code…">
+<div class="bfc-drop" hidden></div>
+</div>
+<div class="bfc-status" aria-live="polite"></div>
+<div class="bfc-panel" hidden></div>
+<noscript><p class="bfc-sub">The instant converter needs JavaScript — or browse the chart below, which works everywhere.</p></noscript>
+</section>
 <div class="bf-stats">
 <div class="bf-stat"><div class="n">119</div><div class="l">Pro Acryl paints matched</div></div>
 <div class="bf-stat"><div class="n">7%</div><div class="l">nearly identical (&Delta;E &le; 2)</div></div>

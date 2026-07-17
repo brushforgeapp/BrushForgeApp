@@ -63,7 +63,8 @@ HEAD_CSP = ('<meta http-equiv="Content-Security-Policy" content="default-src \'s
             "frame-ancestors 'none'; base-uri 'self'; form-action 'self'\">")
 
 
-def shell(*, title, desc, canonical, body, schemas=(), active=""):
+def shell(*, title, desc, canonical, body, schemas=(), active="", scripts=()):
+    scripts_html = "".join(f'<script defer src="{s}"></script>' for s in scripts)
     schema_html = "".join(
         f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>'
         for s in schemas)
@@ -103,6 +104,7 @@ def shell(*, title, desc, canonical, body, schemas=(), active=""):
 <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <link rel="stylesheet" href="/assets/css/catalog.css">
+{scripts_html}
 </head>
 <body>
 <header class="header"><div class="container nav">
@@ -171,6 +173,34 @@ def cta_band(slot, heading, sub):
 <a class="btn primary" href="{play_url(slot)}" rel="noopener">Get it on Android</a>
 <a class="btn" href="{IOS_URL}" rel="noopener">Download for iOS</a>
 </div></section>"""
+
+
+def converter_section(source_brand=None, target_brand=None):
+    attrs = ""
+    if source_brand:
+        attrs += f' data-source-brand="{esc(source_brand)}"'
+    if target_brand:
+        attrs += f' data-target-brand="{esc(target_brand)}"'
+    if source_brand:
+        ph = f"Search a {esc(disp(source_brand))} paint — name or code…"
+        sub = (f"Type any {esc(disp(source_brand))} paint and get the closest "
+               f"{esc(disp(target_brand)) if target_brand else 'cross-brand'} matches instantly — "
+               "same ΔE2000 engine as the app.")
+    else:
+        ph = "Search 2,900+ paints — name, code or brand…"
+        sub = "Pick any paint, get the closest match in every brand instantly — same ΔE2000 engine as the app."
+    return f"""<section class="bfc"{attrs}>
+<h2 class="bfc-title">Instant converter</h2>
+<p class="bfc-sub">{sub}</p>
+<div class="bfc-wrap">
+<label class="sr-only" for="bfc-q" style="position:absolute;left:-9999px;">Search paints</label>
+<input class="bfc-input" id="bfc-q" type="search" autocomplete="off" spellcheck="false" placeholder="{ph}">
+<div class="bfc-drop" hidden></div>
+</div>
+<div class="bfc-status" aria-live="polite"></div>
+<div class="bfc-panel" hidden></div>
+<noscript><p class="bfc-sub">The instant converter needs JavaScript — or browse the chart below, which works everywhere.</p></noscript>
+</section>"""
 
 
 def legend():
@@ -347,6 +377,7 @@ with ΔE2000 color science, the same engine as the BrushForge app.</p>
 </div></div>
 <p class="bf-updated">Charts cover brush-on, metallic and wash paints. Airbrush ranges and sprays are
 in the BrushForge app — 4,300+ paints in total, updated continuously.</p>
+{converter_section(a, b)}
 <div class="bf-stats">
 <div class="bf-stat"><div class="n">{total}</div><div class="l">{esc(ad)} paints matched</div></div>
 <div class="bf-stat"><div class="n">{pct2}%</div><div class="l">nearly identical (&Delta;E &le; 2)</div></div>
@@ -372,7 +403,8 @@ in the BrushForge app — 4,300+ paints in total, updated continuously.</p>
             f"paints, scored with ΔE2000 color distance. {pct5}% match at ΔE ≤ 5.")
     schemas = [breadcrumb_schema(crumb_items, canonical), dataset, faq_schema(qas)]
     return url_path, shell(title=title, desc=desc, canonical=canonical, body=body,
-                           schemas=schemas, active="charts")
+                           schemas=schemas, active="charts",
+                           scripts=("/assets/js/converter.js",))
 
 # ------------------------------------------------------------- paint pages
 
@@ -605,6 +637,8 @@ color science — Citadel, Vallejo, Army Painter, AK Interactive, Scale75, Pro A
 Two Thin Coats and Kimera.</p>
 <p class="bf-updated">Updated {TODAY_HUMAN}</p>
 </div></div>
+{converter_section()}
+<h2 class="bf-h2">All charts by brand</h2>
 {''.join(sections)}
 {cta_band('convert-index', 'Charts are handy. The converter is instant.',
           'Search any of 4,300+ paints and convert to any brand in two taps — free, offline, in the BrushForge app.')}"""
@@ -612,7 +646,8 @@ Two Thin Coats and Kimera.</p>
     desc = ("Free paint conversion charts for every brand pair: Citadel to Vallejo, Army Painter, "
             "AK, Scale75 and more. ΔE2000-matched equivalents for 2,600+ paints.")
     return "/convert/index.html", shell(title=title, desc=desc, canonical=canonical, body=body,
-                                        schemas=[breadcrumb_schema(crumb_items, canonical)], active="charts")
+                                        schemas=[breadcrumb_schema(crumb_items, canonical)],
+                                        active="charts", scripts=("/assets/js/converter.js",))
 
 # ---------------------------------------------------------------- sitemaps
 
@@ -697,11 +732,12 @@ def main():
 
     print("writing converter data…")
     data = [[p["name"], p["brand"], paint_line_label(p), p["code"], p["type"], p["finish"],
-             p["pool"], p["hex"], f"{brand_slug(p['brand'])}/{p['slug']}"] for p in paints]
+             p["pool"], p["hex"], f"{brand_slug(p['brand'])}/{p['slug']}",
+             1 if bf.recommendable(p) else 0] for p in paints]
     (ROOT / "assets/data").mkdir(parents=True, exist_ok=True)
     (ROOT / "assets/data/paints.min.json").write_text(
         json.dumps({"updated": TODAY, "fields": ["name", "brand", "line", "code", "type",
-                                                 "finish", "pool", "hex", "path"],
+                                                 "finish", "pool", "hex", "path", "reco"],
                     "paints": data}, ensure_ascii=False, separators=(",", ":")))
 
     if args.full:
