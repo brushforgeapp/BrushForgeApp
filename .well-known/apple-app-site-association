@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["QU42M6Y29T.com.basmahieu.TheBrushForge"],
+        "components": [
+          { "/": "/paints/*", "comment": "Paint pages open in the app" },
+          { "/": "/convert/*", "comment": "Charts and converter open in the app" }
+        ]
+      }
+    ]
+  }
+}
