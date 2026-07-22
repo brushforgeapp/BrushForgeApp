@@ -6,12 +6,8 @@ app half. Nothing in the shipped apps changes until these snippets are added and
 
 ## Status
 
-- [x] assetlinks.json hosted (contains the upload key certificate)
-- [ ] Add the Play App Signing certificate to assetlinks.json
-      (Play Console: Test and release > Setup > App integrity > App signing > "App signing key
-      certificate" > SHA-256 fingerprint. Paste it as a second entry in
-      sha256_cert_fingerprints. Without it, verification fails on devices, because Google
-      re-signs releases with that key.)
+- [x] assetlinks.json hosted with BOTH certificates: the Play App Signing key (1E:74:0A:...)
+      and the upload key (ED:32:B4:...). The website half is complete.
 - [x] apple-app-site-association hosted (appID QU42M6Y29T.com.basmahieu.TheBrushForge)
 - [ ] Android: intent filter + routing (below), ship in a normal release
 - [ ] iOS: Associated Domains entitlement (below), ship in a normal release
